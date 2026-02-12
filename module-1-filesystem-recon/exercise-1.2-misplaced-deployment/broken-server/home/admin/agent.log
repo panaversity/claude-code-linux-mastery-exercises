@@ -1,0 +1,22 @@
+2026-02-09 14:30:01 [summarizer-agent] INFO: Starting Summarizer Agent on 0.0.0.0:8080
+2026-02-09 14:30:02 [summarizer-agent] INFO: Database initialized at /root/agent-data/database.sqlite
+2026-02-09 14:32:15 [summarizer-agent] INFO: POST /summarize - 347 tokens used
+2026-02-09 14:35:44 [summarizer-agent] INFO: POST /summarize - cache hit for hash a3f2b1c8...
+2026-02-09 14:41:03 [summarizer-agent] INFO: POST /summarize - 512 tokens used
+2026-02-09 14:45:00 [summarizer-agent] INFO: GET /health 200
+2026-02-09 15:02:18 [summarizer-agent] ERROR: SSL certificate path not found: /var/www/agent-certs/server.key
+2026-02-09 15:02:18 [summarizer-agent] WARNING: Falling back to HTTP (no SSL)
+2026-02-09 15:15:33 [summarizer-agent] INFO: POST /summarize - 289 tokens used
+2026-02-09 16:00:00 [summarizer-agent] INFO: GET /health 200
+2026-02-09 16:22:41 [summarizer-agent] WARNING: Disk space low in /tmp (82% used)
+2026-02-09 16:30:01 [summarizer-agent] INFO: GET /stats - 47 total summaries, 15234 total tokens
+2026-02-09 17:00:00 [summarizer-agent] INFO: GET /health 200
+2026-02-09 17:45:12 [summarizer-agent] INFO: POST /summarize - 423 tokens used
+2026-02-09 18:00:00 [summarizer-agent] INFO: GET /health 200
+2026-02-09 18:30:55 [summarizer-agent] ERROR: Database locked - another process accessing /root/agent-data/database.sqlite
+2026-02-09 18:30:56 [summarizer-agent] INFO: Database lock resolved after retry
+2026-02-09 19:00:00 [summarizer-agent] INFO: GET /health 200
+2026-02-09 20:00:00 [summarizer-agent] INFO: GET /health 200
+2026-02-09 21:15:33 [summarizer-agent] INFO: POST /summarize - 198 tokens used
+2026-02-10 02:00:01 [summarizer-agent] WARNING: /tmp cleanup by systemd-tmpfiles may affect agent files
+2026-02-10 06:00:00 [summarizer-agent] INFO: GET /health 200

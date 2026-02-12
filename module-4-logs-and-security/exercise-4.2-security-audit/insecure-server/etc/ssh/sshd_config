@@ -1,0 +1,75 @@
+#	$OpenBSD: sshd_config,v 8.9 2025/07/15 00:00:00 Exp $
+
+# This is the sshd server system-wide configuration file.  See
+# sshd_config(5) for more information.
+
+# The strategy used for options in the default sshd_config shipped with
+# OpenSSH is to specify options with their default value where
+# possible, but leave them commented.  Uncommented options override the
+# default value.
+
+# Networking
+Port 22
+#AddressFamily any
+ListenAddress 0.0.0.0
+#ListenAddress ::
+
+# Host keys
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+SyslogFacility AUTH
+LogLevel INFO
+
+# Authentication:
+LoginGraceTime 2m
+
+# NOTE: Temporarily enabled root login for server migration on 2025-08-14
+# TODO: Disable this after migration is complete
+PermitRootLogin yes
+
+StrictModes yes
+MaxAuthTries 6
+MaxSessions 10
+
+PubkeyAuthentication yes
+
+# Don't read the user's ~/.rhosts and ~/.shosts files
+IgnoreRhosts yes
+
+# NOTE: Enabled password auth for new team members who haven't set up keys yet
+# Added 2025-08-14 by admin@company.com - "just until everyone has keys"
+PasswordAuthentication yes
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+KbdInteractiveAuthentication no
+
+UsePAM yes
+
+AllowAgentForwarding yes
+AllowTcpForwarding no
+GatewayPorts no
+X11Forwarding no
+PrintMotd no
+PrintLastLog yes
+TCPKeepAlive yes
+PermitTunnel no
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem sftp /usr/lib/openssh/sftp-server
+
+# No banner (disabled for cleaner automated deploys)
+#Banner /etc/issue.net
+
+# Idle timeout (none configured)
+#ClientAliveInterval 0
+#ClientAliveCountMax 3

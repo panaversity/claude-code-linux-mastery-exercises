@@ -1,0 +1,32 @@
+-- Journal begins at Mon 2026-02-03 00:00:00 UTC --
+Feb 10 09:00:01 prod-server-01 systemd[1]: Starting Customer Support Agent...
+Feb 10 09:00:01 prod-server-01 systemd[1]: support-agent.service: Failed to determine user credentials: No such user
+Feb 10 09:00:01 prod-server-01 systemd[1]: support-agent.service: Failed at step USER spawning /opt/support-agent/venv/bin/python: No such process
+Feb 10 09:00:01 prod-server-01 systemd[1]: support-agent.service: Main process exited, code=exited, status=217/USER
+Feb 10 09:00:01 prod-server-01 systemd[1]: support-agent.service: Failed with result 'exit-code'.
+Feb 10 09:00:06 prod-server-01 systemd[1]: Starting Customer Support Agent...
+Feb 10 09:00:06 prod-server-01 systemd[1]: support-agent.service: Failed to determine user credentials: No such user
+Feb 10 09:00:06 prod-server-01 systemd[1]: support-agent.service: Main process exited, code=exited, status=217/USER
+Feb 10 09:00:06 prod-server-01 systemd[1]: support-agent.service: Failed with result 'exit-code'.
+Feb 10 09:00:11 prod-server-01 systemd[1]: Starting Customer Support Agent...
+Feb 10 09:00:11 prod-server-01 systemd[1]: support-agent.service: Failed to determine user credentials: No such user
+Feb 10 09:00:11 prod-server-01 systemd[1]: support-agent.service: Main process exited, code=exited, status=217/USER
+Feb 10 09:00:11 prod-server-01 systemd[1]: support-agent.service: Failed with result 'exit-code'.
+Feb 10 09:00:11 prod-server-01 systemd[1]: support-agent.service: Trigger limit hit, refusing further activation.
+Feb 10 09:00:11 prod-server-01 systemd[1]: Failed to start Customer Support Agent.
+
+-- After admin recreated user and restarted --
+Feb 10 09:15:00 prod-server-01 systemd[1]: Starting Customer Support Agent...
+Feb 10 09:15:00 prod-server-01 (python)[12451]: /opt/support-agent/venv/bin/python: not found
+Feb 10 09:15:00 prod-server-01 systemd[1]: support-agent.service: Main process exited, code=exited, status=203/EXEC
+Feb 10 09:15:00 prod-server-01 systemd[1]: support-agent.service: Failed with result 'exit-code'.
+
+-- After admin fixed the path and restarted --
+Feb 10 09:30:00 prod-server-01 systemd[1]: Starting Customer Support Agent...
+Feb 10 09:30:00 prod-server-01 support-agent[12580]: INFO:     Started server process [12580]
+Feb 10 09:30:00 prod-server-01 support-agent[12580]: INFO:     Waiting for application startup.
+Feb 10 09:30:00 prod-server-01 support-agent[12580]: INFO:     Application startup complete.
+Feb 10 09:30:01 prod-server-01 support-agent[12580]: ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8080): address already in use
+Feb 10 09:30:01 prod-server-01 support-agent[12580]: INFO:     Shutting down
+Feb 10 09:30:01 prod-server-01 systemd[1]: support-agent.service: Main process exited, code=exited, status=1/FAILURE
+Feb 10 09:30:01 prod-server-01 systemd[1]: support-agent.service: Failed with result 'exit-code'.

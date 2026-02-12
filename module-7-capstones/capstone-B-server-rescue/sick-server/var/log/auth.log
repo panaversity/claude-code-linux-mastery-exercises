@@ -1,0 +1,28 @@
+Feb  9 14:22:01 prod-server sshd[12001]: Accepted publickey for admin from 10.0.1.100 port 43210 ssh2: RSA SHA256:abc123...
+Feb  9 14:22:01 prod-server sshd[12001]: pam_unix(sshd:session): session opened for user admin(uid=1000) by (uid=0)
+Feb  9 14:45:33 prod-server sshd[12001]: pam_unix(sshd:session): session closed for user admin
+Feb  9 15:10:22 prod-server sudo[12100]: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/systemctl edit support-agent
+Feb  9 15:12:45 prod-server sudo[12105]: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/systemctl daemon-reload
+Feb  9 15:13:01 prod-server sudo[12108]: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/systemctl restart support-agent
+Feb  9 18:00:55 prod-server sshd[12500]: pam_unix(sshd:session): session closed for user admin
+Feb 10 03:21:44 prod-server sshd[15230]: Connection from 45.33.32.156 port 52340
+Feb 10 03:21:47 prod-server sshd[15230]: Failed password for root from 45.33.32.156 port 52340 ssh2
+Feb 10 03:21:50 prod-server sshd[15230]: Failed password for root from 45.33.32.156 port 52340 ssh2
+Feb 10 03:21:53 prod-server sshd[15230]: Failed password for root from 45.33.32.156 port 52340 ssh2
+Feb 10 03:21:55 prod-server sshd[15230]: Connection closed by 45.33.32.156 port 52340 [preauth]
+Feb 10 03:22:10 prod-server sshd[15234]: Connection from 45.33.32.156 port 52341
+Feb 10 03:22:12 prod-server sshd[15234]: Failed password for admin from 45.33.32.156 port 52341 ssh2
+Feb 10 03:22:15 prod-server sshd[15234]: Failed password for admin from 45.33.32.156 port 52341 ssh2
+Feb 10 03:22:18 prod-server sshd[15234]: Failed password for admin from 45.33.32.156 port 52341 ssh2
+Feb 10 03:22:22 prod-server sshd[15234]: Accepted password for admin from 45.33.32.156 port 52341 ssh2
+Feb 10 03:22:22 prod-server sshd[15234]: pam_unix(sshd:session): session opened for user admin(uid=1000) by (uid=0)
+Feb 10 03:22:30 prod-server sudo[15240]: admin : TTY=pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Feb 10 03:22:45 prod-server sudo[15242]: admin : TTY=pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/ls -la /opt/
+Feb 10 03:23:01 prod-server sudo[15244]: admin : TTY=pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/cat /etc/support-agent/agent.env
+Feb 10 03:24:15 prod-server sshd[15234]: pam_unix(sshd:session): session closed for user admin
+Feb 10 06:00:01 prod-server CRON[15500]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Feb 10 06:00:01 prod-server CRON[15500]: pam_unix(cron:session): session closed for user root
+Feb 10 08:30:22 prod-server sshd[15800]: Accepted publickey for admin from 10.0.1.100 port 43555 ssh2: RSA SHA256:abc123...
+Feb 10 08:30:22 prod-server sshd[15800]: pam_unix(sshd:session): session opened for user admin(uid=1000) by (uid=0)
+Feb 10 09:15:00 prod-server sudo[15900]: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/df -h
+Feb 10 09:15:30 prod-server sudo[15905]: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/du -sh /var/log/*

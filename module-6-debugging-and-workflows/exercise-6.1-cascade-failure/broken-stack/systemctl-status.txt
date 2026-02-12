@@ -1,0 +1,9 @@
+● support-agent.service - Customer Support Agent
+     Loaded: loaded (/etc/systemd/system/support-agent.service; enabled)
+     Active: activating (auto-restart) (Result: exit-code) since Mon 2026-02-10 09:45:00 UTC; 2s ago
+    Process: 14523 ExecStart=/opt/support-agent/.venv/bin/python main.py (code=exited, status=1/FAILURE)
+   Main PID: 14523 (code=exited, status=1/FAILURE)
+        CPU: 245ms
+
+Feb 10 09:45:00 prod-server systemd[1]: support-agent.service: Main process exited, code=exited, status=1/FAILURE
+Feb 10 09:45:00 prod-server systemd[1]: support-agent.service: Failed with result 'exit-code'.

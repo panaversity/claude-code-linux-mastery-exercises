@@ -1,0 +1,59 @@
+# Agent Application Configuration
+# Last updated: 2025-09-22 by admin
+
+app:
+  name: "support-agent"
+  version: "2.4.1"
+  environment: "production"
+  debug: false
+  host: "0.0.0.0"
+  port: 8080
+  workers: 4
+
+database:
+  host: "db-prod-01.internal.company.com"
+  port: 5432
+  name: "agent_production"
+  user: "agent_svc"
+  # Password moved to .env file
+  pool_size: 20
+  max_overflow: 30
+  pool_timeout: 30
+
+redis:
+  host: "redis-prod-01.internal.company.com"
+  port: 6379
+  db: 0
+  ttl: 3600
+
+ai_model:
+  provider: "deepseek"
+  model: "deepseek-chat"
+  temperature: 0.3
+  max_tokens: 4096
+  timeout: 30
+
+knowledge_base:
+  path: "/opt/agent-app/data/knowledge"
+  index_type: "faiss"
+  embedding_model: "text-embedding-3-small"
+  chunk_size: 512
+  chunk_overlap: 50
+
+logging:
+  level: "INFO"
+  file: "/var/log/agent-app/access.log"
+  max_size: "100MB"
+  # NOTE: No rotation configured yet - will set up logrotate later
+  rotation: null
+
+rate_limiting:
+  enabled: true
+  requests_per_minute: 30
+  burst: 50
+
+cors:
+  allowed_origins:
+    - "https://app.company.com"
+    - "https://admin.company.com"
+    - "*"  # TODO: Remove wildcard before production

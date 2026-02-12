@@ -1,0 +1,30 @@
+[Unit]
+Description=Support Agent - AI-powered customer support chat agent
+Documentation=https://internal.wiki/agents/support-agent
+After=network-online.target redis.service
+Wants=network-online.target
+Requires=redis.service
+
+[Service]
+Type=simple
+User=supportagent
+Group=supportagent
+WorkingDirectory=/opt/support-agent
+ExecStart=/usr/bin/node /opt/support-agent/app.js
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/support-agent/combined.log
+StandardError=append:/var/log/support-agent/combined.log
+
+EnvironmentFile=/opt/support-agent/.env
+
+# Resource limits
+LimitNOFILE=65536
+MemoryMax=2G
+
+# Hardening
+NoNewPrivileges=true
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

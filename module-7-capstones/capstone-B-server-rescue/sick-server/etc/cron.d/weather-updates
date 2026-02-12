@@ -1,0 +1,9 @@
+# Weather data updates -- runs every hour
+# Fetches latest weather data from API and updates the local cache
+#
+# Format: minute hour day month weekday user command
+#
+# Last modified: 2026-01-15 by admin
+# Changed from every 30 min to every hour to reduce API costs
+
+60 * * * * weather /opt/weather-bot/fetch-weather.sh >> /var/log/weather-bot/weather.log 2>&1

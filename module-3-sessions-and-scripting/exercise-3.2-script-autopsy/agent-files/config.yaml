@@ -1,0 +1,38 @@
+# Customer Support Agent Configuration
+# Environment-specific values are overridden by environment variables
+
+app:
+  name: customer-support-agent
+  version: 2.4.1
+  port: 8080
+  host: 0.0.0.0
+  workers: 4
+
+model:
+  provider: openai
+  name: gpt-4
+  max_tokens: 2048
+  temperature: 0.3
+  timeout_seconds: 30
+
+knowledge_base:
+  path: /opt/customer-support-agent/knowledge/
+  reload_interval_minutes: 60
+  max_articles: 5000
+
+logging:
+  level: INFO
+  format: "%(asctime)s [%(levelname)s] %(message)s"
+  file: /var/log/customer-support-agent/agent.log
+  max_size_mb: 100
+  backup_count: 5
+
+escalation:
+  confidence_threshold: 0.5
+  max_retries: 3
+  fallback_model: gpt-3.5-turbo
+  notification_email: support-team@example.com
+
+rate_limiting:
+  requests_per_minute: 60
+  burst_size: 10

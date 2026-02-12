@@ -1,0 +1,67 @@
+# ============================================================================
+# NOTE: This file represents an 800MB, 5.2 million line log file.
+# In a real scenario, this file has been growing since the agent was deployed
+# on 2025-11-01 and has NEVER been rotated. The sample below shows the most
+# recent entries. On the real server, `ls -lh` shows:
+#
+#   -rw-r--r-- 1 support support 823M Feb 10 10:00 access.log
+#   $ wc -l access.log
+#   5,234,891 access.log
+#
+# The oldest entries date back to 2025-11-01. This file is one of the primary
+# contributors to the disk being at 95%.
+# ============================================================================
+
+2026-02-10 09:45:01 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:45:01 [INFO] support-agent: Model: gpt-4, Redis: redis://localhost:6379/0
+2026-02-10 09:45:03 [INFO] support-agent: Chat request: user=cust_4821 session=sess_99012
+2026-02-10 09:45:04 [INFO] support-agent: Response: tokens=18 model=gpt-4
+2026-02-10 09:45:04 [INFO] support-agent: Chat request: user=cust_1193 session=sess_99013
+2026-02-10 09:45:05 [INFO] support-agent: Response: tokens=22 model=gpt-4
+2026-02-10 09:45:12 [WARNING] support-agent: Cache lookup slow: 2340ms (threshold: 500ms)
+2026-02-10 09:45:13 [INFO] support-agent: Chat request: user=cust_7782 session=sess_99014
+2026-02-10 09:45:15 [WARNING] support-agent: Cache lookup slow: 2891ms (threshold: 500ms)
+2026-02-10 09:45:15 [INFO] support-agent: Response: tokens=15 model=gpt-4
+2026-02-10 09:45:22 [INFO] support-agent: Chat request: user=cust_0394 session=sess_99015
+2026-02-10 09:45:24 [WARNING] support-agent: Cache lookup slow: 3102ms (threshold: 500ms)
+2026-02-10 09:45:24 [INFO] support-agent: Response: tokens=20 model=gpt-4
+2026-02-10 09:45:30 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:45:30 [INFO] support-agent: Shutting down support-agent
+2026-02-10 09:45:30 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:45:30 [INFO] support-agent: Model: gpt-4, Redis: redis://localhost:6379/0
+2026-02-10 09:45:31 [INFO] support-agent: Chat request: user=cust_5501 session=sess_99016
+2026-02-10 09:45:32 [WARNING] support-agent: Cache lookup slow: 2567ms (threshold: 500ms)
+2026-02-10 09:45:33 [INFO] support-agent: Response: tokens=17 model=gpt-4
+2026-02-10 09:45:35 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:45:35 [INFO] support-agent: Shutting down support-agent
+2026-02-10 09:45:35 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:45:35 [INFO] support-agent: Model: gpt-4, Redis: redis://localhost:6379/0
+2026-02-10 09:45:36 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:45:36 [INFO] support-agent: Shutting down support-agent
+2026-02-10 09:45:36 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:45:36 [INFO] support-agent: Model: gpt-4, Redis: redis://localhost:6379/0
+2026-02-10 09:45:37 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:45:37 [INFO] support-agent: Shutting down support-agent
+2026-02-10 09:45:37 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:45:37 [INFO] support-agent: Model: gpt-4, Redis: redis://localhost:6379/0
+2026-02-10 09:45:38 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:45:38 [INFO] support-agent: Shutting down support-agent
+2026-02-10 09:45:38 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:45:38 [INFO] support-agent: Model: gpt-4, Redis: redis://localhost:6379/0
+2026-02-10 09:46:01 [INFO] support-agent: Chat request: user=cust_2210 session=sess_99017
+2026-02-10 09:46:03 [WARNING] support-agent: Cache lookup slow: 3455ms (threshold: 500ms)
+2026-02-10 09:46:03 [INFO] support-agent: Response: tokens=19 model=gpt-4
+2026-02-10 09:50:12 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:50:12 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:50:12 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:50:13 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:50:13 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:50:13 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:50:13 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:50:14 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:55:01 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:55:01 [INFO] support-agent: Model: gpt-4, Redis: redis://localhost:6379/0
+2026-02-10 09:55:03 [WARNING] support-agent: Cache lookup slow: 4012ms (threshold: 500ms)
+2026-02-10 09:55:05 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)
+2026-02-10 09:55:05 [INFO] support-agent: Starting support-agent on port 8080
+2026-02-10 09:55:05 [ERROR] support-agent: Service restarting -- exit code 137 (OOM killed)

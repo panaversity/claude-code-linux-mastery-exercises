@@ -1,0 +1,14 @@
+# This was the working configuration as of Feb 8, 2026
+
+ExecStart=/opt/support-agent/venv/bin/python main.py
+# Note: venv was at /opt/support-agent/venv/
+# It was recreated on Feb 9 during Python upgrade
+# New location: /opt/support-agent/.venv/
+
+User=supportagent
+# User was created with: useradd -r -s /bin/false supportagent
+# Note: Admin deleted user on Feb 9 while "cleaning up unused accounts"
+
+Port: 8080
+# Port 8080 was exclusively used by support-agent
+# Note: Internal dashboard was deployed on Feb 9, also using port 8080

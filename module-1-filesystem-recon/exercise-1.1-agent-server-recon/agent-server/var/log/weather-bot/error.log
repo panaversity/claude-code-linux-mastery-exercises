@@ -1,0 +1,12 @@
+2026-02-08 14:23:45 [weather-bot] ERROR: API error for Tokyo: HTTP 429 - Rate limit exceeded
+2026-02-08 14:23:45 [weather-bot] WARNING: Serving stale cache for Tokyo (age: 1243s)
+2026-02-08 14:28:45 [weather-bot] ERROR: API error for Tokyo: HTTP 429 - Rate limit exceeded
+2026-02-08 14:33:46 [weather-bot] INFO: API recovered for Tokyo - fresh data fetched
+2026-02-09 03:12:01 [weather-bot] ERROR: Redis connection refused - falling back to in-memory cache
+2026-02-09 03:12:01 [weather-bot] WARNING: Cache will not persist across restarts
+2026-02-09 03:15:33 [weather-bot] INFO: Redis reconnected successfully
+2026-02-09 22:41:18 [weather-bot] ERROR: Timeout fetching weather for Sydney (30s exceeded)
+2026-02-09 22:41:18 [weather-bot] WARNING: Returning cached data for Sydney (age: 892s)
+2026-02-09 22:46:19 [weather-bot] INFO: Sydney fetch recovered - 287ms response
+2026-02-10 01:00:00 [weather-bot] INFO: Log rotation completed - previous log archived
+2026-02-10 06:00:12 [weather-bot] INFO: Service started - PID 14523

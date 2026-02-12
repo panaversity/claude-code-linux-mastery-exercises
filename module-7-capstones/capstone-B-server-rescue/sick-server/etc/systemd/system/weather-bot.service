@@ -1,0 +1,31 @@
+[Unit]
+Description=Weather Data Bot
+After=network.target
+
+[Service]
+Type=simple
+User=weather
+Group=weather
+WorkingDirectory=/opt/weather-bot
+ExecStart=/usr/bin/python3 /opt/weather-bot/main.py
+EnvironmentFile=/etc/weather-bot/bot.env
+
+# Logging
+StandardOutput=append:/var/log/weather-bot/weather.log
+StandardError=append:/var/log/weather-bot/error.log
+
+# Restart policy
+Restart=on-failure
+RestartSec=10
+
+# Resource limits
+MemoryMax=256M
+CPUQuota=25%
+
+# Security
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/log/weather-bot /var/lib/weather-bot
+
+[Install]
+WantedBy=multi-user.target

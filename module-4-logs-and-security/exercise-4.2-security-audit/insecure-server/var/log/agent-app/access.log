@@ -1,0 +1,57 @@
+2026-02-09 08:12:03 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 08:12:03 [INFO] Response: 200 latency=2ms
+2026-02-09 08:15:22 [INFO] Request: POST /api/chat remote_addr=192.168.1.45 user_id=usr_a1b2c3 session_id=sess_x7k9m2 token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTFiMmMzIiwiZXhwIjoxNzA3NDgwMDAwfQ.fake_signature
+2026-02-09 08:15:23 [INFO] Response: 200 tokens=234 latency=187ms session_id=sess_x7k9m2
+2026-02-09 08:16:01 [INFO] Request: POST /api/chat remote_addr=192.168.1.78 user_id=usr_d4e5f6 session_id=sess_p3q4r5 token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZDRlNWY2IiwiZXhwIjoxNzA3NDgwMDAwfQ.fake_signature
+2026-02-09 08:16:02 [INFO] Response: 200 tokens=189 latency=156ms session_id=sess_p3q4r5
+2026-02-09 08:22:15 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 08:22:15 [INFO] Response: 200 latency=1ms
+2026-02-09 08:30:44 [INFO] Request: POST /api/chat remote_addr=172.16.0.23 user_id=usr_g7h8i9 session_id=sess_m1n2o3 token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZzdoOGk5IiwiZXhwIjoxNzA3NDgwMDAwfQ.fake_signature
+2026-02-09 08:30:45 [INFO] Response: 200 tokens=412 latency=298ms session_id=sess_m1n2o3
+2026-02-09 08:31:00 [ERROR] Request: POST /api/chat remote_addr=10.44.2.15 user_id=usr_j0k1l2 session_id=sess_t5u6v7 - Knowledge base lookup failed
+2026-02-09 08:31:00 [ERROR] Response: 500 latency=12ms session_id=sess_t5u6v7
+2026-02-09 08:45:12 [INFO] Request: POST /api/feedback remote_addr=192.168.1.45 user_id=usr_a1b2c3 session_id=sess_x7k9m2
+2026-02-09 08:45:12 [INFO] Response: 201 latency=34ms
+2026-02-09 09:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 09:00:00 [INFO] Response: 200 latency=2ms
+2026-02-09 09:02:33 [INFO] Request: POST /api/chat remote_addr=192.168.1.112 user_id=usr_m3n4o5 session_id=sess_w8x9y0
+2026-02-09 09:02:34 [INFO] Response: 200 tokens=567 latency=345ms session_id=sess_w8x9y0
+2026-02-09 09:15:00 [INFO] Request: GET /api/sessions remote_addr=192.168.1.45 user_id=usr_a1b2c3
+2026-02-09 09:15:01 [INFO] Response: 200 latency=89ms user_id=usr_a1b2c3
+2026-02-09 09:22:18 [WARN] Rate limiter triggered: user_id=usr_d4e5f6 remote_addr=192.168.1.78 requests_in_window=35
+2026-02-09 09:30:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 09:30:00 [INFO] Response: 200 latency=1ms
+2026-02-09 09:45:55 [INFO] Request: POST /api/chat remote_addr=172.16.0.23 user_id=usr_g7h8i9 session_id=sess_m1n2o3
+2026-02-09 09:45:56 [INFO] Response: 200 tokens=223 latency=178ms session_id=sess_m1n2o3
+2026-02-09 10:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 10:00:00 [INFO] Response: 200 latency=2ms
+2026-02-09 10:12:03 [ERROR] Request: POST /api/chat remote_addr=10.44.2.88 user_id=usr_p6q7r8 session_id=sess_a2b3c4 - Upstream timeout
+2026-02-09 10:12:09 [ERROR] Response: 504 latency=6012ms session_id=sess_a2b3c4
+2026-02-09 10:30:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 10:30:00 [INFO] Response: 200 latency=1ms
+2026-02-09 10:44:19 [INFO] Request: POST /api/chat remote_addr=192.168.1.45 user_id=usr_a1b2c3 session_id=sess_x7k9m2
+2026-02-09 10:44:20 [INFO] Response: 200 tokens=678 latency=432ms session_id=sess_x7k9m2
+2026-02-09 11:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 11:00:00 [INFO] Response: 200 latency=2ms
+2026-02-09 11:15:33 [INFO] Request: POST /api/chat remote_addr=192.168.1.78 user_id=usr_d4e5f6 session_id=sess_p3q4r5
+2026-02-09 11:15:34 [INFO] Response: 200 tokens=301 latency=212ms session_id=sess_p3q4r5
+2026-02-09 12:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 12:00:00 [INFO] Response: 200 latency=1ms
+2026-02-09 13:22:45 [WARN] Memory usage: 478MB/512MB (93%)
+2026-02-09 14:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 14:00:00 [INFO] Response: 200 latency=2ms
+2026-02-09 14:33:12 [INFO] Request: POST /api/chat remote_addr=192.168.1.112 user_id=usr_m3n4o5 session_id=sess_w8x9y0
+2026-02-09 14:33:13 [INFO] Response: 200 tokens=445 latency=267ms session_id=sess_w8x9y0
+2026-02-09 15:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 15:00:00 [INFO] Response: 200 latency=1ms
+2026-02-09 16:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 16:00:00 [INFO] Response: 200 latency=2ms
+2026-02-09 17:15:03 [INFO] Request: POST /api/chat remote_addr=172.16.0.23 user_id=usr_g7h8i9 session_id=sess_m1n2o3
+2026-02-09 17:15:04 [INFO] Response: 200 tokens=189 latency=134ms session_id=sess_m1n2o3
+2026-02-09 18:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 18:00:00 [INFO] Response: 200 latency=1ms
+2026-02-09 19:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 19:00:00 [INFO] Response: 200 latency=2ms
+2026-02-09 20:00:00 [INFO] Request: GET /api/health remote_addr=10.0.1.10 user_agent="ELB-HealthChecker/2.0"
+2026-02-09 20:00:00 [INFO] Response: 200 latency=1ms
+2026-02-09 22:45:00 [WARN] Disk usage at 87% on /var/log

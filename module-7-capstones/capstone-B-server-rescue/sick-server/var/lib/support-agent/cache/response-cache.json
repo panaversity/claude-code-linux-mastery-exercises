@@ -1,0 +1,67 @@
+{
+  "_metadata": {
+    "description": "Cached AI responses for common customer queries",
+    "created": "2025-11-01T00:00:00Z",
+    "last_modified": "2026-02-10T09:55:00Z",
+    "note": "THIS FILE REPRESENTS A 2.1GB CACHE FILE. On the real server:",
+    "real_size": "2.1GB",
+    "real_entries": 847293,
+    "ls_output": "-rw-r--r-- 1 support support 2.1G Feb 10 09:55 response-cache.json",
+    "problem": "No max size configured. No TTL on entries. No eviction policy. Cache grows forever.",
+    "expected_max_size": "100MB",
+    "impact": "Cache lookups take 2-4 seconds instead of <100ms due to file size. Also contributing to disk 95% full."
+  },
+  "cache_entries_sample": [
+    {
+      "key": "sha256:a1b2c3d4e5f6",
+      "query": "How do I reset my password?",
+      "response": "To reset your password, go to Settings > Account > Reset Password...",
+      "tokens_used": 45,
+      "model": "gpt-4",
+      "created_at": "2025-11-01T10:00:00Z",
+      "last_accessed": "2026-02-10T09:30:00Z",
+      "access_count": 12847
+    },
+    {
+      "key": "sha256:b2c3d4e5f6a7",
+      "query": "What are your business hours?",
+      "response": "Our business hours are Monday through Friday, 9 AM to 5 PM EST...",
+      "tokens_used": 38,
+      "model": "gpt-4",
+      "created_at": "2025-11-01T10:05:00Z",
+      "last_accessed": "2026-02-10T09:45:00Z",
+      "access_count": 9234
+    },
+    {
+      "key": "sha256:c3d4e5f6a7b8",
+      "query": "I need a refund",
+      "response": "I understand you'd like a refund. Let me help you with that...",
+      "tokens_used": 52,
+      "model": "gpt-4",
+      "created_at": "2025-11-02T14:30:00Z",
+      "last_accessed": "2026-02-10T08:15:00Z",
+      "access_count": 7891
+    },
+    {
+      "key": "sha256:d4e5f6a7b8c9",
+      "query": "Track my order",
+      "response": "To track your order, please provide your order number...",
+      "tokens_used": 41,
+      "model": "gpt-4",
+      "created_at": "2025-11-03T09:00:00Z",
+      "last_accessed": "2026-02-09T22:00:00Z",
+      "access_count": 15432
+    },
+    {
+      "key": "sha256:e5f6a7b8c9d0",
+      "query": "Cancel my subscription",
+      "response": "I can help you cancel your subscription. Please note...",
+      "tokens_used": 67,
+      "model": "gpt-4",
+      "created_at": "2025-11-05T11:22:00Z",
+      "last_accessed": "2026-02-10T07:30:00Z",
+      "access_count": 4521
+    }
+  ],
+  "_remaining_entries": "847288 more entries not shown. Oldest entry: 2025-11-01. Many entries have not been accessed in months but are never evicted."
+}

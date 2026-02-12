@@ -1,0 +1,23 @@
+# Production Environment Overrides
+# Updated 2026-02-01 by ops team
+#
+# These values override the defaults for the production deployment.
+# Format: KEY=VALUE (one per line)
+# Lines starting with # are comments.
+
+APP_NAME=customer-support-agent
+VERSION=2.4.1
+DEBUG_MODE=false
+APP_PORT=8080
+WORKER_COUNT=4
+DB_URL=postgresql://proddb.internal:5432/support_agent
+POOL_SIZE=20
+REDIS_URL=redis://cache.internal:6379/0
+CACHE_TTL=3600
+LOG_LEVEL=WARNING
+LOG_PATH=/var/log/support-agent/app.log
+DOMAIN=support.example.com
+CERT_PATH=/etc/ssl/certs/support.example.com.pem
+KEY_PATH=/etc/ssl/private/support.example.com.key
+RATE_LIMIT=10r/s
+METRICS_PORT=9090

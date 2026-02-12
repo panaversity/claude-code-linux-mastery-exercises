@@ -1,0 +1,11 @@
+# System Metrics Commands for Monitoring Window
+# Run these to monitor server health while agents operate
+
+# CPU and memory overview (updates every 2 seconds)
+watch -n 2 'echo "=== CPU ===" && uptime && echo "" && echo "=== MEMORY ===" && free -h && echo "" && echo "=== DISK ===" && df -h / /var /opt'
+
+# Alternative: per-process view of agent resource usage
+# ps aux | grep -E "(weather-bot|support-agent|data-processor)" | grep -v grep
+
+# Network connections for agent ports
+# ss -tlnp | grep -E "(8001|8002)"

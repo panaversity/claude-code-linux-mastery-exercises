@@ -1,0 +1,6 @@
+service,port,protocol,notes
+nginx-external,443,https,public-facing reverse proxy
+support-agent-app,8080,http,internal application server
+redis-cache,6379,tcp,internal caching layer
+postgresql,5432,tcp,internal database
+prometheus-metrics,9090,http,monitoring and alerting

@@ -1,0 +1,129 @@
+# Agent Application Configuration Template
+# Replace all PLACEHOLDER values before deployment
+#
+# This template contains sections for three output files:
+#   1. nginx.conf (web server / reverse proxy)
+#   2. app-config.yaml (application settings)
+#   3. .env.production (environment variables and secrets)
+#
+# Source your values from:
+#   - env-overrides.txt (production KEY=VALUE pairs)
+#   - team-notes.md (DECISION: lines for confirmed values)
+#   - secrets-reference.txt (vault references for secrets)
+#   - port-assignments.csv (service ports)
+
+# ============================================================
+# SECTION: NGINX CONFIG
+# Output file: nginx.conf
+# ============================================================
+
+server {
+    listen PLACEHOLDER_PORT ssl;
+    server_name PLACEHOLDER_DOMAIN;
+
+    ssl_certificate PLACEHOLDER_CERT_PATH;
+    ssl_certificate_key PLACEHOLDER_KEY_PATH;
+
+    # Security headers
+    add_header X-Frame-Options DENY;
+    add_header X-Content-Type-Options nosniff;
+    add_header X-XSS-Protection "1; mode=block";
+
+    # Proxy to application
+    location / {
+        proxy_pass http://127.0.0.1:PLACEHOLDER_APP_PORT;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+    }
+
+    # Health check endpoint (no access log noise)
+    location /health {
+        proxy_pass http://127.0.0.1:PLACEHOLDER_APP_PORT/health;
+        access_log off;
+    }
+
+    # Static assets
+    location /static/ {
+        alias /var/www/PLACEHOLDER_APP_NAME/static/;
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Rate limiting zone
+    limit_req_zone $binary_remote_addr zone=api:10m rate=PLACEHOLDER_RATE_LIMIT;
+
+    location /api/ {
+        limit_req zone=api burst=20 nodelay;
+        proxy_pass http://127.0.0.1:PLACEHOLDER_APP_PORT;
+    }
+}
+
+# ============================================================
+# SECTION: APP CONFIG (YAML)
+# Output file: app-config.yaml
+# ============================================================
+
+app:
+  name: PLACEHOLDER_APP_NAME
+  version: PLACEHOLDER_VERSION
+  debug: PLACEHOLDER_DEBUG_MODE
+  port: PLACEHOLDER_APP_PORT
+  host: "0.0.0.0"
+  workers: PLACEHOLDER_WORKER_COUNT
+
+database:
+  url: PLACEHOLDER_DB_URL
+  pool_size: PLACEHOLDER_POOL_SIZE
+  timeout: 30
+  ssl_mode: require
+
+redis:
+  url: PLACEHOLDER_REDIS_URL
+  ttl: PLACEHOLDER_CACHE_TTL
+  max_connections: 10
+
+logging:
+  level: PLACEHOLDER_LOG_LEVEL
+  format: json
+  output: PLACEHOLDER_LOG_PATH
+  rotation: "50MB"
+  retention: 30
+
+monitoring:
+  enabled: true
+  metrics_port: PLACEHOLDER_METRICS_PORT
+  health_endpoint: /health
+
+# ============================================================
+# SECTION: ENVIRONMENT FILE
+# Output file: .env.production
+# ============================================================
+
+# Application
+APP_NAME=PLACEHOLDER_APP_NAME
+APP_PORT=PLACEHOLDER_APP_PORT
+APP_VERSION=PLACEHOLDER_VERSION
+DEBUG=PLACEHOLDER_DEBUG_MODE
+WORKERS=PLACEHOLDER_WORKER_COUNT
+
+# Database
+DATABASE_URL=PLACEHOLDER_DB_URL
+DB_POOL_SIZE=PLACEHOLDER_POOL_SIZE
+
+# Redis
+REDIS_URL=PLACEHOLDER_REDIS_URL
+REDIS_TTL=PLACEHOLDER_CACHE_TTL
+
+# Logging
+LOG_LEVEL=PLACEHOLDER_LOG_LEVEL
+LOG_PATH=PLACEHOLDER_LOG_PATH
+
+# Secrets (use vault references -- DO NOT put real values here)
+API_KEY=PLACEHOLDER_API_KEY
+DB_PASSWORD=PLACEHOLDER_DB_PASSWORD
+REDIS_PASSWORD=PLACEHOLDER_REDIS_PASSWORD
+SECRET_KEY=PLACEHOLDER_SECRET_KEY

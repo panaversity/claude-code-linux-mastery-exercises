@@ -1,0 +1,956 @@
+2026-02-10 00:00:00 [INFO] Health check: OK memory=331MB cpu=19%
+2026-02-10 00:02:34 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 00:02:35 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=23ms
+2026-02-10 00:19:36 [INFO] Request: POST /api/feedback user=alice session=s-a005
+2026-02-10 00:19:37 [INFO] Response: 201 latency=151ms
+2026-02-10 00:21:00 [INFO] Request: POST /api/chat user=david session=s-d007
+2026-02-10 00:21:01 [INFO] Response: 200 tokens=553 latency=83ms
+2026-02-10 00:21:58 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 00:21:59 [INFO] Response: 200 tokens=110 latency=152ms
+2026-02-10 00:26:28 [INFO] Request: GET /api/chat user=eve session=s-e003
+2026-02-10 00:26:29 [INFO] Response: 200 tokens=753 latency=103ms
+2026-02-10 00:29:39 [INFO] Request: GET /api/chat user=alice session=s-a002
+2026-02-10 00:29:40 [INFO] Response: 200 tokens=407 latency=161ms
+2026-02-10 00:31:08 [INFO] Request: POST /api/chat user=bob session=s-b005
+2026-02-10 00:31:09 [INFO] Response: 201 tokens=556 latency=170ms
+2026-02-10 00:42:55 [INFO] Request: GET /api/chat user=eve session=s-e003
+2026-02-10 00:42:56 [INFO] Response: 200 tokens=102 latency=122ms
+2026-02-10 00:44:36 [INFO] Request: POST /api/feedback user=david session=s-d008
+2026-02-10 00:44:37 [INFO] Response: 200 latency=138ms
+2026-02-10 00:46:09 [INFO] Request: POST /api/feedback user=david session=s-d001
+2026-02-10 00:46:10 [INFO] Response: 201 latency=127ms
+2026-02-10 00:54:26 [INFO] Request: GET /api/chat user=eve session=s-e003
+2026-02-10 00:54:27 [INFO] Response: 200 tokens=520 latency=104ms
+2026-02-10 01:13:37 [INFO] Request: POST /api/chat user=alice session=s-a006
+2026-02-10 01:13:38 [INFO] Response: 201 tokens=296 latency=146ms
+2026-02-10 01:14:14 [INFO] Request: GET /api/chat user=alice session=s-a008
+2026-02-10 01:14:21 [ERROR] Response: 504 error="Upstream timeout" latency=7166ms
+2026-02-10 01:19:29 [INFO] Request: GET /api/chat user=david session=s-d005
+2026-02-10 01:19:30 [INFO] Response: 200 tokens=404 latency=84ms
+2026-02-10 01:30:00 [INFO] Health check: OK memory=335MB cpu=34%
+2026-02-10 01:33:46 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 01:33:47 [INFO] Response: 200 tokens=233 latency=102ms
+2026-02-10 01:54:21 [INFO] Request: POST /api/chat user=alice session=s-a006
+2026-02-10 01:54:23 [INFO] Response: 200 tokens=578 latency=2999ms
+2026-02-10 02:15:00 [INFO] Health check: OK memory=220MB cpu=23%
+2026-02-10 02:38:09 [INFO] Request: GET /api/sessions user=eve session=s-e005
+2026-02-10 02:38:10 [INFO] Response: 200 latency=156ms
+2026-02-10 02:40:38 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 02:40:39 [INFO] Response: 201 tokens=166 latency=90ms
+2026-02-10 03:08:32 [INFO] Request: POST /api/feedback user=charlie session=s-c003
+2026-02-10 03:08:33 [INFO] Response: 201 latency=40ms
+2026-02-10 03:29:05 [INFO] Request: GET /api/chat user=charlie session=s-c003
+2026-02-10 03:29:06 [INFO] Response: 200 tokens=576 latency=89ms
+2026-02-10 03:30:00 [INFO] Health check: OK memory=418MB cpu=12%
+2026-02-10 03:53:54 [INFO] Request: GET /api/sessions user=alice session=s-a006
+2026-02-10 03:53:55 [INFO] Response: 200 latency=197ms
+2026-02-10 04:00:00 [INFO] Health check: OK memory=204MB cpu=13%
+2026-02-10 05:02:19 [INFO] Request: GET /api/chat user=eve session=s-e004
+2026-02-10 05:02:20 [INFO] Response: 200 tokens=447 latency=51ms
+2026-02-10 05:15:00 [INFO] Health check: OK memory=368MB cpu=27%
+2026-02-10 05:29:03 [INFO] Request: POST /api/feedback user=bob session=s-b007
+2026-02-10 05:29:04 [INFO] Response: 201 latency=70ms
+2026-02-10 05:36:55 [INFO] Request: POST /api/chat user=bob session=s-b005
+2026-02-10 05:36:56 [INFO] Response: 200 tokens=352 latency=51ms
+2026-02-10 05:46:50 [INFO] Request: GET /api/chat user=charlie session=s-c003
+2026-02-10 05:46:51 [INFO] Response: 200 tokens=540 latency=130ms
+2026-02-10 05:52:55 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 05:52:56 [INFO] Response: 200 tokens=635 latency=116ms
+2026-02-10 05:59:04 [INFO] Request: POST /api/feedback user=charlie session=s-c006
+2026-02-10 05:59:05 [INFO] Response: 201 latency=240ms
+2026-02-10 06:18:22 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 06:18:23 [INFO] Response: 200 tokens=748 latency=37ms
+2026-02-10 06:22:41 [INFO] Request: POST /api/chat user=david session=s-d005
+2026-02-10 06:22:42 [INFO] Response: 201 tokens=202 latency=187ms
+2026-02-10 06:23:00 [INFO] Request: GET /api/chat user=david session=s-d008
+2026-02-10 06:23:01 [INFO] Response: 200 tokens=541 latency=159ms
+2026-02-10 06:35:18 [INFO] Request: POST /api/chat user=alice session=s-a003
+2026-02-10 06:35:19 [INFO] Response: 201 tokens=62 latency=94ms
+2026-02-10 06:44:07 [INFO] Request: GET /api/chat user=david session=s-d009
+2026-02-10 06:44:08 [ERROR] Response: 401 error="Invalid session" latency=5ms
+2026-02-10 06:55:41 [INFO] Request: GET /api/chat user=charlie session=s-c005
+2026-02-10 06:55:42 [INFO] Response: 200 tokens=445 latency=76ms
+2026-02-10 07:10:24 [INFO] Request: GET /api/health user=alice session=s-a002
+2026-02-10 07:10:25 [INFO] Response: 200 latency=69ms
+2026-02-10 07:10:27 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 07:10:28 [INFO] Response: 200 tokens=690 latency=119ms
+2026-02-10 07:11:49 [INFO] Request: GET /api/chat user=eve session=s-e004
+2026-02-10 07:11:50 [INFO] Response: 200 tokens=747 latency=69ms
+2026-02-10 07:12:51 [INFO] Request: GET /api/chat user=bob session=s-b004
+2026-02-10 07:12:52 [INFO] Response: 200 tokens=244 latency=128ms
+2026-02-10 07:12:57 [INFO] Request: POST /api/chat user=david session=s-d008
+2026-02-10 07:12:58 [INFO] Response: 200 tokens=389 latency=62ms
+2026-02-10 07:15:02 [INFO] Request: GET /api/chat user=eve session=s-e008
+2026-02-10 07:15:07 [ERROR] Response: 504 error="Upstream timeout" latency=5915ms
+2026-02-10 07:17:49 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 07:17:50 [INFO] Response: 200 tokens=52 latency=91ms
+2026-02-10 07:19:25 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 07:19:26 [INFO] Response: 200 tokens=707 latency=239ms
+2026-02-10 07:22:15 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 07:22:16 [INFO] Response: 201 tokens=95 latency=179ms
+2026-02-10 07:25:31 [INFO] Request: POST /api/chat user=alice session=s-a003
+2026-02-10 07:25:32 [INFO] Response: 200 tokens=137 latency=165ms
+2026-02-10 07:28:22 [INFO] Request: POST /api/chat user=charlie session=s-c003
+2026-02-10 07:28:23 [INFO] Response: 201 tokens=443 latency=138ms
+2026-02-10 07:28:29 [INFO] Request: GET /api/chat user=charlie session=s-c005
+2026-02-10 07:28:30 [INFO] Response: 200 tokens=651 latency=179ms
+2026-02-10 07:28:38 [INFO] Request: POST /api/chat user=eve session=s-e006
+2026-02-10 07:28:39 [INFO] Response: 200 tokens=478 latency=1916ms
+2026-02-10 07:32:05 [INFO] Request: GET /api/chat user=bob session=s-b002
+2026-02-10 07:32:06 [INFO] Response: 200 tokens=172 latency=1326ms
+2026-02-10 07:33:36 [INFO] Request: POST /api/chat user=alice session=s-a007
+2026-02-10 07:33:37 [INFO] Response: 200 tokens=268 latency=236ms
+2026-02-10 07:35:26 [INFO] Request: POST /api/chat user=david session=s-d005
+2026-02-10 07:35:27 [INFO] Response: 201 tokens=510 latency=140ms
+2026-02-10 07:37:36 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 07:37:37 [INFO] Response: 200 tokens=317 latency=188ms
+2026-02-10 07:47:20 [INFO] Request: GET /api/chat user=alice session=s-a002
+2026-02-10 07:47:21 [INFO] Response: 200 tokens=211 latency=1587ms
+2026-02-10 07:52:02 [INFO] Request: GET /api/sessions user=charlie session=s-c006
+2026-02-10 07:52:03 [ERROR] Response: 429 error="Rate limit exceeded" latency=10ms
+2026-02-10 07:53:48 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 07:53:49 [INFO] Response: 200 tokens=201 latency=167ms
+2026-02-10 07:56:15 [INFO] Request: GET /api/chat user=charlie session=s-c001
+2026-02-10 07:56:16 [INFO] Response: 200 tokens=719 latency=73ms
+2026-02-10 07:59:30 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 07:59:31 [INFO] Response: 200 tokens=480 latency=69ms
+2026-02-10 08:00:00 [INFO] Health check: OK memory=390MB cpu=26%
+2026-02-10 08:00:06 [INFO] Request: GET /api/chat user=bob session=s-b005
+2026-02-10 08:00:07 [INFO] Response: 200 tokens=433 latency=106ms
+2026-02-10 08:01:24 [WARN] Disk usage at 76% on /var/log
+2026-02-10 08:05:00 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 08:05:01 [INFO] Response: 200 tokens=620 latency=165ms
+2026-02-10 08:14:22 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 08:14:23 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=24ms
+2026-02-10 08:15:12 [INFO] Request: GET /api/chat user=bob session=s-b001
+2026-02-10 08:15:13 [INFO] Response: 200 tokens=523 latency=105ms
+2026-02-10 08:15:24 [INFO] Request: POST /api/chat user=charlie session=s-c003
+2026-02-10 08:15:25 [INFO] Response: 201 tokens=724 latency=92ms
+2026-02-10 08:15:46 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 08:15:47 [INFO] Response: 200 tokens=711 latency=127ms
+2026-02-10 08:17:09 [INFO] Request: POST /api/chat user=david session=s-d005
+2026-02-10 08:17:10 [INFO] Response: 201 tokens=374 latency=59ms
+2026-02-10 08:18:43 [INFO] Request: GET /api/chat user=eve session=s-e004
+2026-02-10 08:18:44 [INFO] Response: 200 tokens=259 latency=136ms
+2026-02-10 08:22:54 [INFO] Request: POST /api/chat user=charlie session=s-c001
+2026-02-10 08:22:55 [INFO] Response: 200 tokens=437 latency=30ms
+2026-02-10 08:27:06 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 08:27:07 [INFO] Response: 200 tokens=382 latency=594ms
+2026-02-10 08:28:55 [INFO] Request: POST /api/chat user=alice session=s-a006
+2026-02-10 08:28:56 [INFO] Response: 201 tokens=777 latency=80ms
+2026-02-10 08:32:46 [INFO] Request: GET /api/chat user=alice session=s-a008
+2026-02-10 08:32:47 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 08:32:47 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=34ms
+2026-02-10 08:32:48 [INFO] Response: 200 tokens=659 latency=73ms
+2026-02-10 08:34:46 [INFO] Request: GET /api/chat user=bob session=s-b004
+2026-02-10 08:34:47 [INFO] Response: 200 tokens=90 latency=189ms
+2026-02-10 08:41:54 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 08:41:55 [INFO] Response: 200 tokens=107 latency=117ms
+2026-02-10 08:43:49 [INFO] Request: GET /api/chat user=alice session=s-a005
+2026-02-10 08:43:50 [INFO] Response: 200 tokens=718 latency=1333ms
+2026-02-10 08:46:29 [INFO] Request: POST /api/feedback user=charlie session=s-c006
+2026-02-10 08:46:30 [INFO] Response: 201 latency=211ms
+2026-02-10 08:46:31 [INFO] Request: GET /api/sessions user=alice session=s-a001
+2026-02-10 08:46:32 [INFO] Response: 200 latency=54ms
+2026-02-10 08:47:53 [INFO] Request: GET /api/chat user=bob session=s-b005
+2026-02-10 08:47:54 [INFO] Response: 200 tokens=406 latency=132ms
+2026-02-10 08:49:27 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 08:49:28 [INFO] Response: 200 tokens=174 latency=155ms
+2026-02-10 08:53:36 [INFO] Request: GET /api/chat user=eve session=s-e009
+2026-02-10 08:53:37 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=35ms
+2026-02-10 08:54:14 [INFO] Request: GET /api/chat user=alice session=s-a001
+2026-02-10 08:54:15 [INFO] Response: 200 tokens=736 latency=144ms
+2026-02-10 08:54:31 [WARN] Connection pool near capacity: 36/50 active
+2026-02-10 08:58:06 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 08:58:07 [INFO] Response: 200 tokens=412 latency=69ms
+2026-02-10 08:58:14 [INFO] Request: POST /api/feedback user=eve session=s-e004
+2026-02-10 08:58:15 [INFO] Response: 201 latency=104ms
+2026-02-10 08:59:48 [INFO] Request: GET /api/chat user=bob session=s-b001
+2026-02-10 08:59:49 [INFO] Response: 200 tokens=460 latency=179ms
+2026-02-10 09:00:59 [INFO] Request: GET /api/chat user=david session=s-d007
+2026-02-10 09:01:00 [INFO] Response: 200 tokens=760 latency=89ms
+2026-02-10 09:01:09 [INFO] Request: GET /api/chat user=david session=s-d004
+2026-02-10 09:01:10 [INFO] Response: 200 tokens=630 latency=87ms
+2026-02-10 09:04:03 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 09:04:04 [INFO] Response: 201 tokens=529 latency=167ms
+2026-02-10 09:04:45 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 09:04:46 [INFO] Response: 200 tokens=367 latency=152ms
+2026-02-10 09:06:03 [INFO] Request: GET /api/sessions user=charlie session=s-c005
+2026-02-10 09:06:04 [INFO] Response: 200 latency=224ms
+2026-02-10 09:07:23 [INFO] Request: GET /api/chat user=alice session=s-a008
+2026-02-10 09:07:24 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=37ms
+2026-02-10 09:08:24 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 09:08:25 [INFO] Response: 200 tokens=93 latency=209ms
+2026-02-10 09:08:46 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 09:08:48 [INFO] Response: 200 tokens=586 latency=2240ms
+2026-02-10 09:12:21 [INFO] Request: GET /api/health user=david session=s-d009
+2026-02-10 09:12:27 [ERROR] Response: 504 error="Upstream timeout" latency=6974ms
+2026-02-10 09:16:08 [INFO] Request: POST /api/chat user=bob session=s-b001
+2026-02-10 09:16:09 [INFO] Response: 201 tokens=488 latency=132ms
+2026-02-10 09:16:33 [INFO] Request: GET /api/sessions user=david session=s-d001
+2026-02-10 09:16:34 [INFO] Response: 200 latency=30ms
+2026-02-10 09:17:12 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 09:17:13 [INFO] Response: 200 tokens=296 latency=216ms
+2026-02-10 09:17:39 [INFO] Request: GET /api/chat user=charlie session=s-c003
+2026-02-10 09:17:40 [INFO] Response: 200 tokens=567 latency=153ms
+2026-02-10 09:20:40 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 09:20:48 [ERROR] Response: 504 error="Upstream timeout" latency=8217ms
+2026-02-10 09:20:55 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 09:21:02 [ERROR] Response: 504 error="Upstream timeout" latency=7684ms
+2026-02-10 09:22:13 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 09:22:14 [INFO] Response: 200 tokens=678 latency=121ms
+2026-02-10 09:23:48 [INFO] Request: GET /api/chat user=bob session=s-b001
+2026-02-10 09:23:49 [INFO] Response: 200 tokens=69 latency=164ms
+2026-02-10 09:25:39 [INFO] Request: POST /api/chat user=charlie session=s-c005
+2026-02-10 09:25:40 [INFO] Response: 200 tokens=536 latency=55ms
+2026-02-10 09:28:04 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 09:28:05 [INFO] Response: 200 tokens=400 latency=651ms
+2026-02-10 09:31:02 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 09:31:03 [INFO] Response: 200 tokens=539 latency=214ms
+2026-02-10 09:32:26 [INFO] Request: POST /api/chat user=eve session=s-e005
+2026-02-10 09:32:27 [INFO] Response: 200 tokens=310 latency=116ms
+2026-02-10 09:35:48 [INFO] Request: POST /api/chat user=david session=s-d001
+2026-02-10 09:35:49 [INFO] Response: 201 tokens=585 latency=30ms
+2026-02-10 09:36:48 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 09:36:49 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=8ms
+2026-02-10 09:37:45 [INFO] Request: POST /api/chat user=alice session=s-a007
+2026-02-10 09:37:46 [INFO] Response: 201 tokens=432 latency=648ms
+2026-02-10 09:39:08 [INFO] Request: POST /api/chat user=bob session=s-b005
+2026-02-10 09:39:09 [INFO] Response: 201 tokens=595 latency=95ms
+2026-02-10 09:39:27 [INFO] Request: GET /api/chat user=david session=s-d009
+2026-02-10 09:39:28 [ERROR] Response: 429 error="Rate limit exceeded" latency=8ms
+2026-02-10 09:40:19 [INFO] Request: GET /api/chat user=bob session=s-b005
+2026-02-10 09:40:20 [INFO] Response: 200 tokens=436 latency=47ms
+2026-02-10 09:40:56 [INFO] Request: POST /api/chat user=alice session=s-a007
+2026-02-10 09:40:57 [INFO] Response: 200 tokens=264 latency=116ms
+2026-02-10 09:41:53 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 09:41:54 [INFO] Response: 200 tokens=329 latency=139ms
+2026-02-10 09:42:44 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 09:42:45 [INFO] Response: 201 tokens=269 latency=99ms
+2026-02-10 09:45:00 [INFO] Health check: OK memory=404MB cpu=34%
+2026-02-10 09:45:17 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 09:45:18 [INFO] Response: 200 tokens=472 latency=113ms
+2026-02-10 09:47:04 [INFO] Request: GET /api/chat user=eve session=s-e004
+2026-02-10 09:47:05 [INFO] Response: 200 tokens=679 latency=86ms
+2026-02-10 09:47:48 [INFO] Request: POST /api/feedback user=eve session=s-e005
+2026-02-10 09:47:49 [INFO] Response: 201 latency=117ms
+2026-02-10 09:48:23 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 09:48:24 [INFO] Response: 200 tokens=303 latency=141ms
+2026-02-10 09:48:45 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 09:48:46 [INFO] Response: 200 tokens=611 latency=116ms
+2026-02-10 09:49:54 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 09:49:59 [ERROR] Response: 504 error="Upstream timeout" latency=5922ms
+2026-02-10 09:54:32 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 09:54:33 [INFO] Response: 200 tokens=785 latency=111ms
+2026-02-10 09:56:06 [INFO] Request: GET /api/chat user=alice session=s-a002
+2026-02-10 09:56:07 [INFO] Response: 200 tokens=258 latency=255ms
+2026-02-10 09:56:24 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 09:56:25 [INFO] Response: 201 tokens=396 latency=690ms
+2026-02-10 09:56:26 [INFO] Request: POST /api/feedback user=eve session=s-e007
+2026-02-10 09:56:27 [INFO] Response: 200 latency=161ms
+2026-02-10 09:59:23 [INFO] Request: GET /api/chat user=charlie session=s-c001
+2026-02-10 09:59:24 [INFO] Response: 200 tokens=130 latency=120ms
+2026-02-10 10:00:16 [INFO] Request: GET /api/chat user=david session=s-d005
+2026-02-10 10:00:17 [INFO] Response: 200 tokens=646 latency=1118ms
+2026-02-10 10:00:47 [INFO] Request: POST /api/chat user=charlie session=s-c005
+2026-02-10 10:00:48 [INFO] Response: 201 tokens=229 latency=48ms
+2026-02-10 10:01:57 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 10:01:58 [INFO] Response: 200 tokens=648 latency=131ms
+2026-02-10 10:02:36 [INFO] Request: GET /api/chat user=alice session=s-a005
+2026-02-10 10:02:37 [INFO] Response: 200 tokens=472 latency=96ms
+2026-02-10 10:03:42 [INFO] Request: POST /api/chat user=bob session=s-b004
+2026-02-10 10:03:43 [INFO] Response: 201 tokens=784 latency=75ms
+2026-02-10 10:04:06 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 10:04:07 [INFO] Response: 200 tokens=95 latency=1001ms
+2026-02-10 10:04:21 [INFO] Request: POST /api/chat user=alice session=s-a001
+2026-02-10 10:04:22 [INFO] Response: 200 tokens=122 latency=87ms
+2026-02-10 10:04:57 [INFO] Request: POST /api/feedback user=alice session=s-a002
+2026-02-10 10:04:58 [INFO] Response: 200 latency=103ms
+2026-02-10 10:05:59 [INFO] Request: GET /api/chat user=david session=s-d007
+2026-02-10 10:06:00 [INFO] Response: 200 tokens=732 latency=108ms
+2026-02-10 10:06:01 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 10:06:02 [INFO] Response: 200 tokens=457 latency=143ms
+2026-02-10 10:06:29 [INFO] Request: POST /api/chat user=alice session=s-a007
+2026-02-10 10:06:30 [INFO] Response: 200 tokens=277 latency=151ms
+2026-02-10 10:10:06 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 10:10:07 [INFO] Response: 201 tokens=274 latency=134ms
+2026-02-10 10:10:11 [INFO] Request: POST /api/chat user=alice session=s-a003
+2026-02-10 10:10:12 [INFO] Response: 201 tokens=287 latency=53ms
+2026-02-10 10:12:13 [INFO] Request: GET /api/chat user=eve session=s-e003
+2026-02-10 10:12:14 [INFO] Response: 200 tokens=661 latency=30ms
+2026-02-10 10:17:35 [INFO] Request: POST /api/feedback user=alice session=s-a003
+2026-02-10 10:17:36 [INFO] Response: 200 latency=49ms
+2026-02-10 10:17:48 [INFO] Request: POST /api/chat user=alice session=s-a006
+2026-02-10 10:17:49 [INFO] Response: 201 tokens=166 latency=97ms
+2026-02-10 10:21:14 [INFO] Request: POST /api/chat user=david session=s-d005
+2026-02-10 10:21:15 [INFO] Response: 201 tokens=751 latency=79ms
+2026-02-10 10:22:51 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 10:22:52 [INFO] Response: 200 tokens=245 latency=118ms
+2026-02-10 10:23:44 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 10:23:45 [INFO] Response: 200 tokens=442 latency=154ms
+2026-02-10 10:26:21 [INFO] Request: GET /api/chat user=eve session=s-e004
+2026-02-10 10:26:22 [INFO] Response: 200 tokens=370 latency=85ms
+2026-02-10 10:26:44 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 10:26:45 [INFO] Response: 200 tokens=552 latency=70ms
+2026-02-10 10:31:40 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 10:31:43 [INFO] Response: 200 tokens=185 latency=3296ms
+2026-02-10 10:34:15 [INFO] Request: GET /api/sessions user=charlie session=s-c005
+2026-02-10 10:34:16 [INFO] Response: 200 latency=897ms
+2026-02-10 10:34:18 [INFO] Request: POST /api/chat user=bob session=s-b005
+2026-02-10 10:34:19 [INFO] Response: 200 tokens=557 latency=78ms
+2026-02-10 10:35:20 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 10:35:21 [INFO] Response: 200 tokens=559 latency=115ms
+2026-02-10 10:37:04 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 10:37:05 [INFO] Response: 200 tokens=111 latency=129ms
+2026-02-10 10:37:20 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 10:37:21 [INFO] Response: 200 tokens=588 latency=100ms
+2026-02-10 10:38:12 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 10:38:13 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=25ms
+2026-02-10 10:40:13 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 10:40:14 [INFO] Response: 200 tokens=126 latency=72ms
+2026-02-10 10:40:35 [INFO] Request: GET /api/chat user=charlie session=s-c005
+2026-02-10 10:40:36 [INFO] Response: 200 tokens=564 latency=115ms
+2026-02-10 10:41:56 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 10:41:57 [INFO] Response: 201 tokens=441 latency=145ms
+2026-02-10 10:42:42 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 10:42:43 [INFO] Response: 200 tokens=569 latency=1614ms
+2026-02-10 10:43:15 [INFO] Request: GET /api/chat user=alice session=s-a002
+2026-02-10 10:43:16 [INFO] Response: 200 tokens=208 latency=1771ms
+2026-02-10 10:45:00 [INFO] Health check: OK memory=444MB cpu=31%
+2026-02-10 10:45:09 [INFO] Request: GET /api/chat user=charlie session=s-c005
+2026-02-10 10:45:10 [INFO] Response: 200 tokens=476 latency=104ms
+2026-02-10 10:46:03 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 10:46:04 [INFO] Response: 200 tokens=747 latency=135ms
+2026-02-10 10:48:29 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 10:48:30 [INFO] Response: 200 tokens=549 latency=61ms
+2026-02-10 10:49:08 [INFO] Request: GET /api/chat user=david session=s-d004
+2026-02-10 10:49:09 [INFO] Response: 200 tokens=215 latency=77ms
+2026-02-10 10:51:12 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 10:51:13 [INFO] Response: 200 tokens=474 latency=131ms
+2026-02-10 10:52:25 [INFO] Request: POST /api/chat user=david session=s-d007
+2026-02-10 10:52:26 [INFO] Response: 200 tokens=126 latency=30ms
+2026-02-10 10:52:34 [INFO] Request: GET /api/sessions user=bob session=s-b003
+2026-02-10 10:52:35 [INFO] Response: 200 latency=70ms
+2026-02-10 10:52:58 [INFO] Request: GET /api/chat user=eve session=s-e003
+2026-02-10 10:52:59 [INFO] Response: 200 tokens=74 latency=956ms
+2026-02-10 10:53:05 [INFO] Request: GET /api/chat user=eve session=s-e003
+2026-02-10 10:53:08 [INFO] Response: 200 tokens=279 latency=3433ms
+2026-02-10 10:54:06 [INFO] Request: POST /api/chat user=charlie session=s-c003
+2026-02-10 10:54:07 [INFO] Response: 200 tokens=624 latency=38ms
+2026-02-10 10:54:14 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 10:54:15 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=29ms
+2026-02-10 10:55:10 [INFO] Request: POST /api/feedback user=bob session=s-b003
+2026-02-10 10:55:11 [INFO] Response: 201 latency=219ms
+2026-02-10 10:55:59 [INFO] Request: GET /api/chat user=alice session=s-a002
+2026-02-10 10:56:00 [INFO] Response: 200 tokens=65 latency=300ms
+2026-02-10 10:58:52 [INFO] Request: POST /api/chat user=david session=s-d009
+2026-02-10 10:58:53 [ERROR] Response: 429 error="Rate limit exceeded" latency=15ms
+2026-02-10 10:59:16 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 10:59:17 [INFO] Response: 200 tokens=322 latency=67ms
+2026-02-10 11:00:36 [INFO] Request: POST /api/feedback user=alice session=s-a003
+2026-02-10 11:00:37 [INFO] Response: 200 latency=190ms
+2026-02-10 11:03:32 [WARN] Disk usage at 82% on /var/log
+2026-02-10 11:04:13 [INFO] Request: GET /api/chat user=charlie session=s-c001
+2026-02-10 11:04:14 [INFO] Response: 200 tokens=519 latency=1816ms
+2026-02-10 11:05:19 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 11:05:20 [INFO] Response: 200 tokens=699 latency=71ms
+2026-02-10 11:06:53 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 11:06:54 [INFO] Response: 200 tokens=96 latency=113ms
+2026-02-10 11:07:25 [INFO] Request: GET /api/sessions user=alice session=s-a004
+2026-02-10 11:07:26 [INFO] Response: 200 latency=1442ms
+2026-02-10 11:07:36 [INFO] Request: POST /api/feedback user=david session=s-d005
+2026-02-10 11:07:37 [INFO] Response: 200 latency=124ms
+2026-02-10 11:10:23 [INFO] Request: POST /api/chat user=alice session=s-a007
+2026-02-10 11:10:24 [INFO] Response: 200 tokens=170 latency=121ms
+2026-02-10 11:10:55 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 11:10:56 [INFO] Response: 200 tokens=103 latency=82ms
+2026-02-10 11:13:42 [INFO] Request: GET /api/chat user=charlie session=s-c001
+2026-02-10 11:13:43 [INFO] Response: 200 tokens=124 latency=106ms
+2026-02-10 11:13:49 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 11:13:50 [INFO] Response: 201 tokens=559 latency=118ms
+2026-02-10 11:15:00 [INFO] Health check: OK memory=257MB cpu=13%
+2026-02-10 11:20:38 [INFO] Request: GET /api/chat user=bob session=s-b005
+2026-02-10 11:20:39 [INFO] Response: 200 tokens=376 latency=30ms
+2026-02-10 11:20:53 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 11:20:54 [INFO] Response: 200 tokens=546 latency=101ms
+2026-02-10 11:23:52 [INFO] Request: GET /api/chat user=eve session=s-e008
+2026-02-10 11:23:57 [ERROR] Response: 504 error="Upstream timeout" latency=5607ms
+2026-02-10 11:24:20 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 11:24:21 [INFO] Response: 200 tokens=481 latency=1069ms
+2026-02-10 11:31:01 [INFO] Request: GET /api/sessions user=alice session=s-a004
+2026-02-10 11:31:02 [INFO] Response: 200 latency=940ms
+2026-02-10 11:36:02 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 11:36:03 [INFO] Response: 200 tokens=649 latency=871ms
+2026-02-10 11:36:50 [INFO] Request: POST /api/chat user=charlie session=s-c006
+2026-02-10 11:36:51 [INFO] Response: 200 tokens=250 latency=292ms
+2026-02-10 11:37:03 [INFO] Request: GET /api/chat user=charlie session=s-c003
+2026-02-10 11:37:04 [INFO] Response: 200 tokens=108 latency=142ms
+2026-02-10 11:37:24 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 11:37:25 [INFO] Response: 200 tokens=624 latency=153ms
+2026-02-10 11:38:19 [INFO] Request: GET /api/chat user=charlie session=s-c003
+2026-02-10 11:38:20 [INFO] Response: 200 tokens=543 latency=147ms
+2026-02-10 11:40:45 [INFO] Request: POST /api/chat user=eve session=s-e006
+2026-02-10 11:40:46 [INFO] Response: 200 tokens=705 latency=95ms
+2026-02-10 11:44:58 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 11:44:59 [INFO] Request: POST /api/chat user=alice session=s-a001
+2026-02-10 11:44:59 [INFO] Response: 200 tokens=139 latency=156ms
+2026-02-10 11:45:00 [INFO] Response: 201 tokens=217 latency=159ms
+2026-02-10 11:45:05 [INFO] Request: POST /api/feedback user=charlie session=s-c005
+2026-02-10 11:45:06 [INFO] Response: 200 latency=92ms
+2026-02-10 11:46:19 [INFO] Request: POST /api/feedback user=eve session=s-e003
+2026-02-10 11:46:20 [INFO] Response: 201 latency=77ms
+2026-02-10 11:46:51 [INFO] Request: GET /api/sessions user=bob session=s-b007
+2026-02-10 11:46:58 [ERROR] Response: 504 error="Upstream timeout" latency=7780ms
+2026-02-10 11:47:44 [INFO] Request: GET /api/sessions user=eve session=s-e006
+2026-02-10 11:47:45 [INFO] Response: 200 latency=103ms
+2026-02-10 11:48:52 [INFO] Request: GET /api/sessions user=eve session=s-e005
+2026-02-10 11:48:53 [INFO] Response: 200 latency=163ms
+2026-02-10 11:50:25 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 11:50:26 [INFO] Response: 200 tokens=750 latency=155ms
+2026-02-10 11:54:09 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 11:54:10 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 11:54:10 [INFO] Response: 200 tokens=416 latency=137ms
+2026-02-10 11:54:18 [ERROR] Response: 504 error="Upstream timeout" latency=8134ms
+2026-02-10 11:55:34 [INFO] Request: POST /api/feedback user=charlie session=s-c006
+2026-02-10 11:55:38 [ERROR] Response: 503 error="Model overloaded" latency=4341ms
+2026-02-10 12:00:00 [INFO] Health check: OK memory=281MB cpu=11%
+2026-02-10 12:00:11 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 12:00:12 [INFO] Response: 200 tokens=593 latency=111ms
+2026-02-10 12:11:31 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 12:11:32 [INFO] Response: 200 tokens=134 latency=151ms
+2026-02-10 12:14:21 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 12:14:22 [INFO] Response: 200 tokens=248 latency=131ms
+2026-02-10 12:17:40 [INFO] Request: POST /api/feedback user=charlie session=s-c006
+2026-02-10 12:17:41 [ERROR] Response: 429 error="Rate limit exceeded" latency=13ms
+2026-02-10 12:17:46 [INFO] Request: POST /api/chat user=david session=s-d009
+2026-02-10 12:17:47 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=31ms
+2026-02-10 12:19:08 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 12:19:09 [ERROR] Response: 429 error="Rate limit exceeded" latency=4ms
+2026-02-10 12:22:46 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 12:22:47 [INFO] Response: 200 tokens=721 latency=52ms
+2026-02-10 12:23:56 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 12:23:57 [INFO] Response: 200 tokens=196 latency=225ms
+2026-02-10 12:27:20 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 12:27:21 [INFO] Response: 200 tokens=665 latency=53ms
+2026-02-10 12:30:06 [INFO] Request: POST /api/chat user=david session=s-d005
+2026-02-10 12:30:07 [INFO] Response: 200 tokens=95 latency=193ms
+2026-02-10 12:38:09 [INFO] Request: POST /api/feedback user=charlie session=s-c005
+2026-02-10 12:38:12 [INFO] Response: 201 latency=3414ms
+2026-02-10 12:38:16 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 12:38:17 [INFO] Response: 200 tokens=738 latency=30ms
+2026-02-10 12:42:06 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 12:42:07 [INFO] Response: 200 tokens=613 latency=206ms
+2026-02-10 12:42:43 [INFO] Request: POST /api/chat user=david session=s-d001
+2026-02-10 12:42:44 [INFO] Response: 200 tokens=596 latency=1774ms
+2026-02-10 12:47:26 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 12:47:27 [INFO] Response: 200 tokens=593 latency=1249ms
+2026-02-10 12:51:07 [INFO] Request: GET /api/sessions user=eve session=s-e004
+2026-02-10 12:51:08 [INFO] Response: 200 latency=1885ms
+2026-02-10 12:51:27 [INFO] Request: GET /api/chat user=bob session=s-b006
+2026-02-10 12:51:31 [INFO] Response: 200 tokens=128 latency=4570ms
+2026-02-10 12:52:50 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 12:52:51 [ERROR] Response: 429 error="Rate limit exceeded" latency=15ms
+2026-02-10 12:53:39 [INFO] Request: POST /api/chat user=david session=s-d005
+2026-02-10 12:53:40 [INFO] Response: 200 tokens=658 latency=159ms
+2026-02-10 12:54:17 [INFO] Request: POST /api/feedback user=eve session=s-e008
+2026-02-10 12:54:18 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=47ms
+2026-02-10 12:55:24 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 12:55:25 [INFO] Response: 200 tokens=298 latency=208ms
+2026-02-10 12:57:43 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 12:57:44 [INFO] Response: 200 tokens=211 latency=234ms
+2026-02-10 12:58:39 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 12:58:40 [INFO] Response: 200 tokens=169 latency=98ms
+2026-02-10 12:58:46 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 12:58:53 [ERROR] Response: 504 error="Upstream timeout" latency=7361ms
+2026-02-10 12:59:36 [INFO] Request: GET /api/chat user=charlie session=s-c005
+2026-02-10 12:59:39 [INFO] Response: 200 tokens=560 latency=3912ms
+2026-02-10 12:59:45 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 12:59:46 [INFO] Response: 200 tokens=306 latency=661ms
+2026-02-10 12:59:51 [INFO] Request: POST /api/chat user=david session=s-d007
+2026-02-10 12:59:52 [INFO] Response: 200 tokens=257 latency=117ms
+2026-02-10 13:02:25 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 13:02:26 [INFO] Response: 201 tokens=613 latency=173ms
+2026-02-10 13:07:59 [INFO] Request: POST /api/chat user=bob session=s-b005
+2026-02-10 13:08:00 [INFO] Response: 200 tokens=613 latency=206ms
+2026-02-10 13:11:48 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 13:11:49 [INFO] Response: 200 tokens=524 latency=795ms
+2026-02-10 13:14:08 [INFO] Request: GET /api/chat user=eve session=s-e002
+2026-02-10 13:14:09 [INFO] Response: 200 tokens=482 latency=58ms
+2026-02-10 13:16:37 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 13:16:38 [ERROR] Response: 429 error="Rate limit exceeded" latency=2ms
+2026-02-10 13:17:59 [INFO] Request: POST /api/chat user=bob session=s-b001
+2026-02-10 13:18:00 [INFO] Response: 201 tokens=373 latency=121ms
+2026-02-10 13:18:41 [INFO] Request: POST /api/chat user=alice session=s-a007
+2026-02-10 13:18:42 [INFO] Response: 200 tokens=445 latency=84ms
+2026-02-10 13:21:43 [INFO] Request: GET /api/sessions user=alice session=s-a005
+2026-02-10 13:21:44 [INFO] Response: 200 latency=124ms
+2026-02-10 13:26:29 [INFO] Request: GET /api/chat user=charlie session=s-c003
+2026-02-10 13:26:30 [INFO] Response: 200 tokens=631 latency=110ms
+2026-02-10 13:27:04 [INFO] Request: POST /api/chat user=charlie session=s-c002
+2026-02-10 13:27:05 [INFO] Response: 201 tokens=357 latency=176ms
+2026-02-10 13:27:26 [INFO] Request: POST /api/feedback user=eve session=s-e003
+2026-02-10 13:27:27 [INFO] Response: 201 latency=109ms
+2026-02-10 13:29:49 [INFO] Request: GET /api/chat user=eve session=s-e006
+2026-02-10 13:29:50 [INFO] Response: 200 tokens=352 latency=87ms
+2026-02-10 13:31:09 [INFO] Request: POST /api/chat user=bob session=s-b005
+2026-02-10 13:31:10 [INFO] Response: 201 tokens=462 latency=143ms
+2026-02-10 13:35:30 [WARN] Slow query detected: knowledge_base_search took 2530ms
+2026-02-10 13:35:36 [INFO] Request: GET /api/chat user=charlie session=s-c005
+2026-02-10 13:35:37 [INFO] Response: 200 tokens=138 latency=146ms
+2026-02-10 13:37:36 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 13:37:37 [INFO] Response: 200 tokens=101 latency=872ms
+2026-02-10 13:43:36 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 13:43:37 [INFO] Response: 200 tokens=254 latency=30ms
+2026-02-10 13:44:57 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 13:44:58 [INFO] Response: 200 tokens=626 latency=154ms
+2026-02-10 13:45:00 [INFO] Health check: OK memory=424MB cpu=16%
+2026-02-10 13:49:13 [INFO] Request: GET /api/chat user=eve session=s-e007
+2026-02-10 13:49:14 [INFO] Response: 200 tokens=771 latency=161ms
+2026-02-10 13:52:03 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 13:52:04 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=28ms
+2026-02-10 13:53:18 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 13:53:19 [INFO] Response: 200 tokens=644 latency=79ms
+2026-02-10 13:53:40 [WARN] Swap usage detected: 92MB active
+2026-02-10 13:55:53 [INFO] Request: GET /api/chat user=david session=s-d007
+2026-02-10 13:55:54 [INFO] Response: 200 tokens=67 latency=202ms
+2026-02-10 13:57:24 [INFO] Request: POST /api/feedback user=david session=s-d005
+2026-02-10 13:57:25 [INFO] Response: 200 latency=57ms
+2026-02-10 13:58:37 [INFO] Request: POST /api/chat user=alice session=s-a007
+2026-02-10 13:58:38 [INFO] Response: 201 tokens=554 latency=196ms
+2026-02-10 13:59:53 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 13:59:54 [INFO] Response: 200 tokens=764 latency=111ms
+2026-02-10 14:01:29 [INFO] Request: POST /api/feedback user=alice session=s-a004
+2026-02-10 14:01:30 [INFO] Response: 201 latency=163ms
+2026-02-10 14:02:01 [INFO] Request: GET /api/chat user=alice session=s-a001
+2026-02-10 14:02:02 [INFO] Response: 200 tokens=253 latency=57ms
+2026-02-10 14:02:20 [INFO] Request: POST /api/chat user=eve session=s-e003
+2026-02-10 14:02:21 [INFO] Response: 201 tokens=205 latency=72ms
+2026-02-10 14:02:26 [INFO] Request: POST /api/chat user=charlie session=s-c005
+2026-02-10 14:02:27 [INFO] Response: 201 tokens=341 latency=103ms
+2026-02-10 14:05:27 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 14:05:28 [INFO] Response: 200 tokens=667 latency=97ms
+2026-02-10 14:06:51 [INFO] Request: GET /api/health user=charlie session=s-c004
+2026-02-10 14:06:52 [INFO] Response: 200 latency=196ms
+2026-02-10 14:07:43 [INFO] Request: POST /api/chat user=bob session=s-b004
+2026-02-10 14:07:44 [INFO] Response: 201 tokens=106 latency=1412ms
+2026-02-10 14:08:51 [INFO] Request: POST /api/chat user=eve session=s-e003
+2026-02-10 14:08:52 [INFO] Response: 201 tokens=503 latency=131ms
+2026-02-10 14:08:53 [INFO] Request: GET /api/chat user=bob session=s-b005
+2026-02-10 14:08:54 [INFO] Response: 200 tokens=703 latency=103ms
+2026-02-10 14:10:44 [INFO] Request: GET /api/chat user=david session=s-d003
+2026-02-10 14:10:45 [INFO] Response: 200 tokens=679 latency=1222ms
+2026-02-10 14:11:31 [INFO] Request: POST /api/chat user=bob session=s-b005
+2026-02-10 14:11:32 [INFO] Response: 201 tokens=104 latency=98ms
+2026-02-10 14:16:13 [INFO] Request: GET /api/chat user=eve session=s-e008
+2026-02-10 14:16:14 [ERROR] Response: 429 error="Rate limit exceeded" latency=11ms
+2026-02-10 14:17:19 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 14:17:20 [INFO] Response: 200 tokens=756 latency=114ms
+2026-02-10 14:17:40 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 14:17:41 [INFO] Response: 200 tokens=745 latency=83ms
+2026-02-10 14:19:17 [INFO] Request: POST /api/chat user=alice session=s-a006
+2026-02-10 14:19:18 [INFO] Response: 201 tokens=619 latency=154ms
+2026-02-10 14:21:17 [INFO] Request: GET /api/chat user=alice session=s-a001
+2026-02-10 14:21:18 [INFO] Response: 200 tokens=439 latency=123ms
+2026-02-10 14:23:42 [INFO] Request: POST /api/chat user=david session=s-d001
+2026-02-10 14:23:43 [INFO] Response: 201 tokens=151 latency=1841ms
+2026-02-10 14:25:01 [INFO] Request: GET /api/chat user=bob session=s-b005
+2026-02-10 14:25:02 [INFO] Response: 200 tokens=269 latency=185ms
+2026-02-10 14:27:43 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 14:27:44 [INFO] Response: 200 tokens=117 latency=179ms
+2026-02-10 14:28:14 [INFO] Request: POST /api/chat user=bob session=s-b004
+2026-02-10 14:28:15 [INFO] Response: 200 tokens=346 latency=79ms
+2026-02-10 14:29:00 [INFO] Request: GET /api/chat user=david session=s-d006
+2026-02-10 14:29:01 [INFO] Response: 200 tokens=715 latency=131ms
+2026-02-10 14:30:00 [INFO] Health check: OK memory=214MB cpu=13%
+2026-02-10 14:32:03 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 14:32:04 [INFO] Response: 200 tokens=613 latency=74ms
+2026-02-10 14:32:20 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 14:32:23 [INFO] Response: 200 tokens=381 latency=3955ms
+2026-02-10 14:33:33 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 14:33:34 [INFO] Response: 200 tokens=396 latency=139ms
+2026-02-10 14:35:53 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 14:35:54 [INFO] Response: 200 tokens=671 latency=77ms
+2026-02-10 14:37:06 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 14:37:07 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=26ms
+2026-02-10 14:38:44 [WARN] Certificate renewal due in 6 days
+2026-02-10 14:38:58 [WARN] Certificate renewal due in 5 days
+2026-02-10 14:39:11 [INFO] Request: POST /api/feedback user=charlie session=s-c006
+2026-02-10 14:39:12 [INFO] Response: 200 latency=105ms
+2026-02-10 14:39:40 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 14:39:41 [INFO] Response: 200 tokens=359 latency=154ms
+2026-02-10 14:39:43 [INFO] Request: POST /api/feedback user=david session=s-d007
+2026-02-10 14:39:44 [INFO] Response: 201 latency=121ms
+2026-02-10 14:40:19 [INFO] Request: GET /api/chat user=bob session=s-b006
+2026-02-10 14:40:20 [INFO] Response: 200 tokens=268 latency=57ms
+2026-02-10 14:40:52 [INFO] Request: GET /api/sessions user=eve session=s-e003
+2026-02-10 14:40:53 [INFO] Response: 200 latency=64ms
+2026-02-10 14:42:06 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 14:42:07 [ERROR] Response: 401 error="Invalid session" latency=7ms
+2026-02-10 14:45:12 [INFO] Request: POST /api/chat user=alice session=s-a003
+2026-02-10 14:45:13 [INFO] Response: 201 tokens=763 latency=65ms
+2026-02-10 14:47:38 [INFO] Request: GET /api/chat user=david session=s-d005
+2026-02-10 14:47:39 [INFO] Response: 200 tokens=600 latency=167ms
+2026-02-10 14:49:20 [INFO] Request: POST /api/chat user=alice session=s-a006
+2026-02-10 14:49:21 [INFO] Response: 201 tokens=283 latency=192ms
+2026-02-10 14:50:31 [INFO] Request: GET /api/sessions user=bob session=s-b004
+2026-02-10 14:50:32 [INFO] Response: 200 latency=576ms
+2026-02-10 14:51:42 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 14:51:43 [INFO] Response: 200 tokens=277 latency=188ms
+2026-02-10 14:52:46 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 14:52:47 [INFO] Response: 200 tokens=511 latency=1071ms
+2026-02-10 14:52:50 [WARN] Disk usage at 88% on /var/log
+2026-02-10 14:53:30 [INFO] Request: GET /api/chat user=eve session=s-e003
+2026-02-10 14:53:31 [INFO] Response: 200 tokens=189 latency=172ms
+2026-02-10 14:58:05 [INFO] Request: POST /api/chat user=alice session=s-a006
+2026-02-10 14:58:06 [INFO] Response: 201 tokens=583 latency=71ms
+2026-02-10 14:58:28 [INFO] Request: POST /api/feedback user=charlie session=s-c003
+2026-02-10 14:58:29 [INFO] Response: 200 latency=70ms
+2026-02-10 14:58:51 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 14:58:52 [INFO] Response: 200 tokens=113 latency=92ms
+2026-02-10 14:59:20 [INFO] Request: GET /api/health user=bob session=s-b003
+2026-02-10 14:59:21 [INFO] Response: 200 latency=193ms
+2026-02-10 15:00:42 [INFO] Request: GET /api/sessions user=charlie session=s-c001
+2026-02-10 15:00:43 [INFO] Response: 200 latency=1041ms
+2026-02-10 15:01:55 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 15:02:00 [ERROR] Response: 504 error="Upstream timeout" latency=5809ms
+2026-02-10 15:04:08 [INFO] Request: GET /api/chat user=bob session=s-b006
+2026-02-10 15:04:09 [INFO] Response: 200 tokens=482 latency=105ms
+2026-02-10 15:06:51 [INFO] Request: POST /api/chat user=eve session=s-e005
+2026-02-10 15:06:52 [INFO] Response: 201 tokens=370 latency=179ms
+2026-02-10 15:08:52 [WARN] Certificate renewal due in 9 days
+2026-02-10 15:12:01 [INFO] Request: POST /api/chat user=alice session=s-a007
+2026-02-10 15:12:02 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=47ms
+2026-02-10 15:12:14 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 15:12:15 [INFO] Response: 200 tokens=569 latency=143ms
+2026-02-10 15:13:35 [INFO] Request: GET /api/health user=charlie session=s-c005
+2026-02-10 15:13:36 [INFO] Response: 200 latency=173ms
+2026-02-10 15:15:51 [INFO] Request: GET /api/chat user=david session=s-d005
+2026-02-10 15:15:52 [INFO] Response: 200 tokens=258 latency=66ms
+2026-02-10 15:18:16 [INFO] Request: GET /api/chat user=david session=s-d009
+2026-02-10 15:18:20 [ERROR] Response: 503 error="Model overloaded" latency=4194ms
+2026-02-10 15:18:34 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 15:18:35 [INFO] Response: 201 tokens=424 latency=1989ms
+2026-02-10 15:22:48 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 15:22:49 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=28ms
+2026-02-10 15:23:15 [INFO] Request: GET /api/health user=david session=s-d001
+2026-02-10 15:23:16 [INFO] Response: 200 latency=206ms
+2026-02-10 15:23:24 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 15:23:25 [INFO] Response: 200 tokens=781 latency=191ms
+2026-02-10 15:24:58 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 15:24:59 [INFO] Response: 200 tokens=676 latency=173ms
+2026-02-10 15:25:52 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 15:25:53 [INFO] Response: 200 tokens=415 latency=91ms
+2026-02-10 15:26:03 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 15:26:04 [INFO] Response: 200 tokens=762 latency=140ms
+2026-02-10 15:29:32 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 15:29:33 [INFO] Response: 200 tokens=637 latency=167ms
+2026-02-10 15:30:28 [INFO] Request: GET /api/chat user=charlie session=s-c003
+2026-02-10 15:30:29 [INFO] Response: 200 tokens=166 latency=1478ms
+2026-02-10 15:30:41 [INFO] Request: POST /api/chat user=bob session=s-b004
+2026-02-10 15:30:42 [INFO] Response: 200 tokens=717 latency=199ms
+2026-02-10 15:31:57 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 15:31:58 [INFO] Response: 200 tokens=440 latency=84ms
+2026-02-10 15:33:29 [INFO] Request: POST /api/chat user=alice session=s-a005
+2026-02-10 15:33:30 [INFO] Response: 201 tokens=677 latency=127ms
+2026-02-10 15:34:50 [INFO] Request: GET /api/chat user=eve session=s-e007
+2026-02-10 15:34:51 [INFO] Response: 200 tokens=661 latency=118ms
+2026-02-10 15:35:01 [INFO] Request: POST /api/feedback user=david session=s-d002
+2026-02-10 15:35:02 [INFO] Response: 201 latency=61ms
+2026-02-10 15:36:38 [INFO] Request: GET /api/chat user=eve session=s-e008
+2026-02-10 15:36:39 [ERROR] Response: 401 error="Invalid session" latency=3ms
+2026-02-10 15:37:35 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 15:37:36 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=19ms
+2026-02-10 15:38:28 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 15:38:29 [INFO] Response: 200 tokens=490 latency=146ms
+2026-02-10 15:38:39 [INFO] Request: GET /api/chat user=bob session=s-b005
+2026-02-10 15:38:40 [INFO] Response: 200 tokens=455 latency=157ms
+2026-02-10 15:43:57 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 15:44:00 [INFO] Response: 200 tokens=120 latency=3642ms
+2026-02-10 15:44:09 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 15:44:15 [ERROR] Response: 504 error="Upstream timeout" latency=6333ms
+2026-02-10 15:45:00 [INFO] Health check: OK memory=257MB cpu=31%
+2026-02-10 15:45:13 [INFO] Request: POST /api/chat user=david session=s-d005
+2026-02-10 15:45:14 [INFO] Response: 201 tokens=739 latency=171ms
+2026-02-10 15:48:11 [INFO] Request: POST /api/feedback user=eve session=s-e002
+2026-02-10 15:48:12 [INFO] Response: 200 latency=123ms
+2026-02-10 15:49:58 [WARN] Disk usage at 79% on /var/log
+2026-02-10 15:55:18 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 15:55:19 [INFO] Response: 200 tokens=255 latency=62ms
+2026-02-10 15:58:02 [INFO] Request: GET /api/chat user=bob session=s-b005
+2026-02-10 15:58:03 [INFO] Response: 200 tokens=327 latency=1473ms
+2026-02-10 15:58:17 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 15:58:18 [INFO] Response: 200 tokens=352 latency=98ms
+2026-02-10 16:00:00 [INFO] Health check: OK memory=333MB cpu=25%
+2026-02-10 16:00:16 [INFO] Request: POST /api/chat user=charlie session=s-c006
+2026-02-10 16:00:17 [INFO] Response: 201 tokens=564 latency=102ms
+2026-02-10 16:02:53 [INFO] Request: POST /api/chat user=charlie session=s-c001
+2026-02-10 16:02:54 [INFO] Response: 201 tokens=90 latency=81ms
+2026-02-10 16:03:37 [INFO] Request: POST /api/chat user=charlie session=s-c003
+2026-02-10 16:03:38 [INFO] Response: 200 tokens=788 latency=1366ms
+2026-02-10 16:05:08 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 16:05:09 [INFO] Response: 200 tokens=605 latency=167ms
+2026-02-10 16:06:09 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 16:06:10 [INFO] Response: 200 tokens=598 latency=139ms
+2026-02-10 16:07:03 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 16:07:04 [INFO] Response: 200 tokens=582 latency=110ms
+2026-02-10 16:07:17 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 16:07:18 [INFO] Response: 200 tokens=485 latency=87ms
+2026-02-10 16:08:33 [INFO] Request: GET /api/chat user=charlie session=s-c005
+2026-02-10 16:08:34 [INFO] Response: 200 tokens=561 latency=181ms
+2026-02-10 16:10:21 [INFO] Request: GET /api/sessions user=david session=s-d005
+2026-02-10 16:10:22 [INFO] Response: 200 latency=148ms
+2026-02-10 16:12:16 [INFO] Request: POST /api/chat user=alice session=s-a003
+2026-02-10 16:12:17 [INFO] Response: 200 tokens=753 latency=1602ms
+2026-02-10 16:15:37 [INFO] Request: POST /api/chat user=alice session=s-a002
+2026-02-10 16:15:38 [INFO] Response: 201 tokens=585 latency=134ms
+2026-02-10 16:16:02 [INFO] Request: POST /api/chat user=alice session=s-a002
+2026-02-10 16:16:03 [INFO] Response: 201 tokens=168 latency=30ms
+2026-02-10 16:18:53 [INFO] Request: POST /api/chat user=charlie session=s-c001
+2026-02-10 16:18:54 [INFO] Response: 201 tokens=283 latency=89ms
+2026-02-10 16:20:36 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 16:20:40 [INFO] Response: 200 tokens=276 latency=4135ms
+2026-02-10 16:21:34 [INFO] Request: POST /api/chat user=charlie session=s-c005
+2026-02-10 16:21:35 [INFO] Response: 201 tokens=759 latency=105ms
+2026-02-10 16:21:52 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 16:21:55 [INFO] Response: 200 tokens=696 latency=3960ms
+2026-02-10 16:22:03 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 16:22:04 [INFO] Response: 200 tokens=738 latency=94ms
+2026-02-10 16:23:48 [INFO] Request: GET /api/chat user=alice session=s-a005
+2026-02-10 16:23:49 [INFO] Response: 200 tokens=391 latency=146ms
+2026-02-10 16:24:27 [INFO] Request: POST /api/chat user=bob session=s-b005
+2026-02-10 16:24:28 [INFO] Response: 200 tokens=780 latency=54ms
+2026-02-10 16:24:30 [INFO] Request: GET /api/sessions user=alice session=s-a003
+2026-02-10 16:24:31 [INFO] Response: 200 latency=193ms
+2026-02-10 16:28:57 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 16:28:58 [INFO] Response: 201 tokens=583 latency=121ms
+2026-02-10 16:32:26 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 16:32:27 [INFO] Response: 200 tokens=662 latency=147ms
+2026-02-10 16:33:10 [INFO] Request: GET /api/chat user=david session=s-d005
+2026-02-10 16:33:11 [INFO] Response: 200 tokens=199 latency=56ms
+2026-02-10 16:33:22 [INFO] Request: GET /api/health user=david session=s-d001
+2026-02-10 16:33:23 [INFO] Response: 200 latency=181ms
+2026-02-10 16:35:00 [WARN] Swap usage detected: 102MB active
+2026-02-10 16:36:30 [INFO] Request: POST /api/chat user=bob session=s-b001
+2026-02-10 16:36:31 [INFO] Response: 201 tokens=149 latency=89ms
+2026-02-10 16:40:50 [INFO] Request: POST /api/feedback user=eve session=s-e008
+2026-02-10 16:40:57 [ERROR] Response: 504 error="Upstream timeout" latency=7177ms
+2026-02-10 16:41:38 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 16:41:39 [ERROR] Response: 401 error="Invalid session" latency=2ms
+2026-02-10 16:41:40 [INFO] Request: POST /api/feedback user=charlie session=s-c003
+2026-02-10 16:41:41 [INFO] Response: 201 latency=169ms
+2026-02-10 16:42:45 [INFO] Request: GET /api/chat user=eve session=s-e003
+2026-02-10 16:42:46 [INFO] Response: 200 tokens=605 latency=1686ms
+2026-02-10 16:45:27 [INFO] Request: GET /api/chat user=alice session=s-a002
+2026-02-10 16:45:28 [INFO] Response: 200 tokens=202 latency=116ms
+2026-02-10 16:47:46 [INFO] Request: POST /api/feedback user=alice session=s-a005
+2026-02-10 16:47:47 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 16:47:47 [INFO] Response: 200 latency=860ms
+2026-02-10 16:47:48 [INFO] Response: 200 tokens=448 latency=60ms
+2026-02-10 16:53:47 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 16:53:48 [INFO] Response: 200 tokens=235 latency=96ms
+2026-02-10 16:57:41 [INFO] Request: GET /api/chat user=charlie session=s-c003
+2026-02-10 16:57:42 [INFO] Response: 200 tokens=143 latency=1431ms
+2026-02-10 17:04:00 [INFO] Request: GET /api/chat user=bob session=s-b006
+2026-02-10 17:04:01 [INFO] Response: 200 tokens=568 latency=1315ms
+2026-02-10 17:04:24 [INFO] Request: POST /api/chat user=david session=s-d001
+2026-02-10 17:04:25 [INFO] Response: 200 tokens=616 latency=56ms
+2026-02-10 17:05:56 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 17:05:57 [INFO] Response: 200 tokens=484 latency=167ms
+2026-02-10 17:06:21 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 17:06:22 [INFO] Response: 200 tokens=497 latency=30ms
+2026-02-10 17:08:55 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 17:08:56 [INFO] Response: 200 tokens=155 latency=97ms
+2026-02-10 17:15:00 [INFO] Health check: OK memory=373MB cpu=38%
+2026-02-10 17:25:42 [INFO] Request: POST /api/chat user=charlie session=s-c006
+2026-02-10 17:25:43 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=44ms
+2026-02-10 17:26:17 [INFO] Request: POST /api/chat user=alice session=s-a003
+2026-02-10 17:26:18 [INFO] Response: 201 tokens=752 latency=124ms
+2026-02-10 17:27:06 [INFO] Request: POST /api/feedback user=alice session=s-a004
+2026-02-10 17:27:07 [INFO] Response: 201 latency=113ms
+2026-02-10 17:30:12 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 17:30:13 [INFO] Response: 200 tokens=345 latency=1109ms
+2026-02-10 17:33:21 [INFO] Request: POST /api/feedback user=david session=s-d009
+2026-02-10 17:33:22 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=24ms
+2026-02-10 17:33:27 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 17:33:28 [INFO] Response: 201 tokens=294 latency=214ms
+2026-02-10 17:34:10 [INFO] Request: GET /api/sessions user=charlie session=s-c006
+2026-02-10 17:34:11 [INFO] Response: 200 latency=177ms
+2026-02-10 17:37:48 [INFO] Request: POST /api/feedback user=alice session=s-a007
+2026-02-10 17:37:51 [ERROR] Response: 503 error="Model overloaded" latency=3206ms
+2026-02-10 17:38:30 [WARN] Certificate renewal due in 3 days
+2026-02-10 17:38:43 [INFO] Request: GET /api/chat user=david session=s-d008
+2026-02-10 17:38:44 [ERROR] Response: 429 error="Rate limit exceeded" latency=7ms
+2026-02-10 17:39:15 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 17:39:16 [INFO] Response: 200 tokens=479 latency=161ms
+2026-02-10 17:46:38 [INFO] Request: POST /api/chat user=charlie session=s-c006
+2026-02-10 17:46:39 [INFO] Response: 200 tokens=580 latency=96ms
+2026-02-10 17:47:45 [INFO] Request: POST /api/chat user=alice session=s-a003
+2026-02-10 17:47:46 [INFO] Response: 201 tokens=639 latency=30ms
+2026-02-10 17:51:00 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 17:51:03 [ERROR] Response: 503 error="Model overloaded" latency=3625ms
+2026-02-10 17:51:22 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 17:51:23 [INFO] Response: 200 tokens=788 latency=70ms
+2026-02-10 17:55:09 [INFO] Request: GET /api/chat user=charlie session=s-c005
+2026-02-10 17:55:10 [INFO] Response: 200 tokens=721 latency=1135ms
+2026-02-10 17:59:42 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 17:59:43 [INFO] Response: 200 tokens=397 latency=79ms
+2026-02-10 18:00:00 [INFO] Health check: OK memory=421MB cpu=20%
+2026-02-10 18:00:44 [INFO] Request: GET /api/chat user=bob session=s-b005
+2026-02-10 18:00:45 [INFO] Response: 200 tokens=147 latency=52ms
+2026-02-10 18:03:38 [INFO] Request: POST /api/chat user=alice session=s-a008
+2026-02-10 18:03:39 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=4ms
+2026-02-10 18:06:57 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 18:06:58 [INFO] Response: 200 tokens=352 latency=117ms
+2026-02-10 18:07:01 [INFO] Request: GET /api/chat user=charlie session=s-c001
+2026-02-10 18:07:02 [INFO] Response: 200 tokens=654 latency=116ms
+2026-02-10 18:10:37 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 18:10:38 [INFO] Response: 200 tokens=627 latency=1191ms
+2026-02-10 18:15:17 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 18:15:18 [INFO] Response: 200 tokens=377 latency=191ms
+2026-02-10 18:16:29 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 18:16:30 [INFO] Response: 200 tokens=344 latency=120ms
+2026-02-10 18:27:53 [INFO] Request: GET /api/chat user=charlie session=s-c001
+2026-02-10 18:27:54 [INFO] Response: 200 tokens=502 latency=149ms
+2026-02-10 18:31:41 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 18:31:42 [INFO] Response: 200 tokens=278 latency=199ms
+2026-02-10 18:32:25 [INFO] Request: GET /api/sessions user=charlie session=s-c002
+2026-02-10 18:32:27 [INFO] Response: 200 latency=2731ms
+2026-02-10 18:36:06 [INFO] Request: GET /api/chat user=eve session=s-e007
+2026-02-10 18:36:07 [INFO] Response: 200 tokens=377 latency=159ms
+2026-02-10 18:36:12 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 18:36:13 [INFO] Response: 200 tokens=55 latency=104ms
+2026-02-10 18:37:33 [INFO] Request: GET /api/chat user=david session=s-d008
+2026-02-10 18:37:34 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=39ms
+2026-02-10 18:37:37 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 18:37:42 [ERROR] Response: 504 error="Upstream timeout" latency=5590ms
+2026-02-10 18:43:39 [INFO] Request: GET /api/chat user=alice session=s-a005
+2026-02-10 18:43:40 [INFO] Response: 200 tokens=397 latency=146ms
+2026-02-10 18:45:18 [WARN] Certificate renewal due in 14 days
+2026-02-10 18:45:56 [INFO] Request: POST /api/feedback user=eve session=s-e004
+2026-02-10 18:45:57 [INFO] Response: 200 latency=43ms
+2026-02-10 18:50:39 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 18:50:40 [INFO] Response: 200 tokens=638 latency=51ms
+2026-02-10 19:04:49 [INFO] Request: POST /api/chat user=alice session=s-a003
+2026-02-10 19:04:50 [INFO] Response: 201 tokens=179 latency=148ms
+2026-02-10 19:05:18 [INFO] Request: GET /api/chat user=charlie session=s-c002
+2026-02-10 19:05:19 [INFO] Response: 200 tokens=367 latency=68ms
+2026-02-10 19:05:54 [INFO] Request: POST /api/feedback user=charlie session=s-c003
+2026-02-10 19:05:55 [INFO] Response: 201 latency=81ms
+2026-02-10 19:08:44 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 19:08:45 [INFO] Response: 200 tokens=742 latency=102ms
+2026-02-10 19:12:25 [INFO] Request: GET /api/chat user=charlie session=s-c002
+2026-02-10 19:12:26 [INFO] Response: 200 tokens=409 latency=48ms
+2026-02-10 19:13:41 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 19:13:45 [INFO] Response: 200 tokens=260 latency=4312ms
+2026-02-10 19:19:12 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 19:19:13 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=6ms
+2026-02-10 19:20:29 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 19:20:30 [INFO] Response: 200 tokens=223 latency=192ms
+2026-02-10 19:21:50 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 19:21:51 [INFO] Response: 200 tokens=762 latency=79ms
+2026-02-10 19:26:14 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 19:26:15 [INFO] Response: 200 tokens=172 latency=149ms
+2026-02-10 19:37:32 [WARN] Disk usage at 91% on /var/log
+2026-02-10 19:42:29 [WARN] Rate limiter triggered for user=charlie (39 requests in 60s)
+2026-02-10 19:43:41 [INFO] Request: GET /api/sessions user=david session=s-d005
+2026-02-10 19:43:41 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 19:43:42 [INFO] Response: 200 latency=179ms
+2026-02-10 19:43:42 [INFO] Response: 200 tokens=109 latency=988ms
+2026-02-10 19:44:34 [INFO] Request: GET /api/chat user=david session=s-d001
+2026-02-10 19:44:35 [INFO] Response: 200 tokens=764 latency=210ms
+2026-02-10 19:45:00 [INFO] Health check: OK memory=276MB cpu=40%
+2026-02-10 19:47:11 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 19:47:12 [INFO] Response: 200 tokens=579 latency=73ms
+2026-02-10 19:55:22 [INFO] Request: GET /api/chat user=alice session=s-a006
+2026-02-10 19:55:23 [INFO] Response: 200 tokens=53 latency=115ms
+2026-02-10 20:07:36 [INFO] Request: GET /api/chat user=bob session=s-b003
+2026-02-10 20:07:37 [INFO] Response: 200 tokens=670 latency=123ms
+2026-02-10 20:16:23 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 20:16:24 [INFO] Response: 200 tokens=431 latency=165ms
+2026-02-10 20:25:54 [INFO] Request: GET /api/chat user=charlie session=s-c003
+2026-02-10 20:25:55 [INFO] Response: 200 tokens=738 latency=154ms
+2026-02-10 20:26:20 [INFO] Request: POST /api/chat user=david session=s-d001
+2026-02-10 20:26:21 [INFO] Response: 201 tokens=228 latency=95ms
+2026-02-10 20:37:52 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 20:37:53 [INFO] Response: 200 tokens=231 latency=81ms
+2026-02-10 20:38:03 [INFO] Request: GET /api/chat user=charlie session=s-c005
+2026-02-10 20:38:04 [INFO] Response: 200 tokens=722 latency=102ms
+2026-02-10 20:46:07 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 20:46:08 [INFO] Response: 200 tokens=300 latency=525ms
+2026-02-10 20:52:06 [INFO] Request: GET /api/sessions user=alice session=s-a006
+2026-02-10 20:52:07 [INFO] Response: 200 latency=1067ms
+2026-02-10 20:52:13 [INFO] Request: POST /api/chat user=bob session=s-b004
+2026-02-10 20:52:14 [INFO] Response: 200 tokens=420 latency=59ms
+2026-02-10 20:55:31 [INFO] Request: POST /api/chat user=charlie session=s-c006
+2026-02-10 20:55:32 [INFO] Response: 201 tokens=406 latency=144ms
+2026-02-10 20:57:34 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 20:57:35 [INFO] Response: 200 tokens=755 latency=133ms
+2026-02-10 20:59:39 [INFO] Request: POST /api/chat user=eve session=s-e006
+2026-02-10 20:59:40 [INFO] Response: 200 tokens=471 latency=124ms
+2026-02-10 21:00:00 [INFO] Health check: OK memory=280MB cpu=37%
+2026-02-10 21:01:15 [INFO] Request: GET /api/chat user=david session=s-d009
+2026-02-10 21:01:16 [ERROR] Response: 429 error="Rate limit exceeded" latency=15ms
+2026-02-10 21:04:22 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 21:04:23 [INFO] Response: 201 tokens=498 latency=126ms
+2026-02-10 21:05:18 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 21:05:19 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=39ms
+2026-02-10 21:07:40 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 21:07:41 [INFO] Response: 200 tokens=206 latency=1479ms
+2026-02-10 21:12:45 [INFO] Request: GET /api/chat user=charlie session=s-c001
+2026-02-10 21:12:46 [INFO] Response: 200 tokens=303 latency=164ms
+2026-02-10 21:13:26 [INFO] Request: POST /api/chat user=eve session=s-e005
+2026-02-10 21:13:27 [INFO] Response: 200 tokens=113 latency=1989ms
+2026-02-10 21:15:03 [INFO] Request: POST /api/feedback user=eve session=s-e008
+2026-02-10 21:15:04 [ERROR] Response: 401 error="Invalid session" latency=1ms
+2026-02-10 21:24:33 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 21:24:36 [ERROR] Response: 503 error="Model overloaded" latency=3308ms
+2026-02-10 21:31:26 [INFO] Request: GET /api/chat user=david session=s-d006
+2026-02-10 21:31:27 [INFO] Response: 200 tokens=331 latency=122ms
+2026-02-10 21:38:51 [INFO] Request: POST /api/chat user=alice session=s-a003
+2026-02-10 21:38:52 [INFO] Response: 201 tokens=120 latency=47ms
+2026-02-10 21:40:01 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 21:40:05 [INFO] Response: 200 tokens=641 latency=4369ms
+2026-02-10 21:40:54 [INFO] Request: GET /api/chat user=bob session=s-b002
+2026-02-10 21:40:55 [INFO] Response: 200 tokens=144 latency=604ms
+2026-02-10 21:46:07 [INFO] Request: POST /api/chat user=bob session=s-b001
+2026-02-10 21:46:08 [INFO] Response: 201 tokens=789 latency=122ms
+2026-02-10 21:54:20 [INFO] Request: POST /api/chat user=charlie session=s-c005
+2026-02-10 21:54:21 [INFO] Response: 200 tokens=357 latency=189ms
+2026-02-10 21:58:23 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 21:58:24 [INFO] Response: 200 tokens=367 latency=103ms
+2026-02-10 21:59:30 [INFO] Request: GET /api/chat user=charlie session=s-c007
+2026-02-10 21:59:31 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=8ms
+2026-02-10 22:01:27 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 22:01:28 [INFO] Response: 200 tokens=389 latency=42ms
+2026-02-10 22:08:30 [INFO] Request: GET /api/chat user=alice session=s-a007
+2026-02-10 22:08:31 [INFO] Response: 200 tokens=155 latency=141ms
+2026-02-10 22:13:44 [INFO] Request: GET /api/chat user=eve session=s-e005
+2026-02-10 22:13:45 [INFO] Response: 200 tokens=330 latency=1977ms
+2026-02-10 22:25:17 [INFO] Request: GET /api/chat user=eve session=s-e003
+2026-02-10 22:25:18 [INFO] Response: 200 tokens=492 latency=94ms
+2026-02-10 22:26:18 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 22:26:23 [ERROR] Response: 504 error="Upstream timeout" latency=5950ms
+2026-02-10 22:38:02 [INFO] Request: POST /api/chat user=bob session=s-b007
+2026-02-10 22:38:03 [INFO] Response: 201 tokens=304 latency=183ms
+2026-02-10 22:42:25 [INFO] Request: POST /api/chat user=alice session=s-a004
+2026-02-10 22:42:26 [INFO] Response: 201 tokens=435 latency=198ms
+2026-02-10 22:43:06 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 22:43:07 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=31ms
+2026-02-10 22:45:00 [INFO] Health check: OK memory=284MB cpu=9%
+2026-02-10 22:57:23 [INFO] Request: GET /api/sessions user=eve session=s-e007
+2026-02-10 22:57:24 [INFO] Response: 200 latency=181ms
+2026-02-10 22:59:56 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 22:59:57 [INFO] Response: 200 tokens=800 latency=37ms
+2026-02-10 23:09:27 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 23:09:28 [INFO] Response: 201 tokens=545 latency=142ms
+2026-02-10 23:30:00 [INFO] Health check: OK memory=323MB cpu=26%
+2026-02-10 23:31:28 [INFO] Request: GET /api/chat user=alice session=s-a003
+2026-02-10 23:31:29 [INFO] Response: 200 tokens=534 latency=97ms
+2026-02-10 23:36:52 [INFO] Request: GET /api/chat user=bob session=s-b007
+2026-02-10 23:36:53 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=46ms
+2026-02-10 23:45:41 [INFO] Request: GET /api/chat user=charlie session=s-c006
+2026-02-10 23:45:42 [ERROR] Response: 500 error="Knowledge base lookup failed" latency=25ms
+2026-02-10 23:45:59 [INFO] Request: POST /api/chat user=bob session=s-b003
+2026-02-10 23:46:00 [INFO] Response: 200 tokens=555 latency=128ms
+2026-02-10 23:54:33 [INFO] Request: GET /api/chat user=alice session=s-a004
+2026-02-10 23:54:34 [INFO] Response: 200 tokens=497 latency=143ms

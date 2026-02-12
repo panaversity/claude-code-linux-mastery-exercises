@@ -1,0 +1,25 @@
+2026-02-10 06:00:12 [weather-bot] INFO: Starting Weather Bot on port 8001
+2026-02-10 06:00:12 [weather-bot] INFO: Monitoring 5 cities
+2026-02-10 06:00:12 [weather-bot] INFO: Redis cache connected at localhost:6379
+2026-02-10 06:05:14 [weather-bot] INFO: GET /weather 200 - 142ms - 5 cities fetched
+2026-02-10 06:10:15 [weather-bot] INFO: GET /weather 200 - 23ms - cache hit for all cities
+2026-02-10 06:15:14 [weather-bot] INFO: GET /weather 200 - 138ms - 5 cities refreshed
+2026-02-10 06:20:03 [weather-bot] INFO: GET /health 200 - 1ms
+2026-02-10 06:25:15 [weather-bot] INFO: GET /weather 200 - 24ms - cache hit for all cities
+2026-02-10 06:30:14 [weather-bot] INFO: GET /weather 200 - 145ms - 5 cities refreshed
+2026-02-10 07:00:14 [weather-bot] INFO: GET /weather 200 - 139ms - 5 cities refreshed
+2026-02-10 07:30:14 [weather-bot] INFO: GET /weather 200 - 141ms - 5 cities refreshed
+2026-02-10 08:00:14 [weather-bot] INFO: GET /weather 200 - 22ms - cache hit for all cities
+2026-02-10 08:05:14 [weather-bot] INFO: GET /weather 200 - 137ms - 5 cities refreshed
+2026-02-10 08:10:15 [weather-bot] INFO: GET /weather 200 - 25ms - cache hit for all cities
+2026-02-10 08:30:01 [weather-bot] INFO: GET /health 200 - 1ms
+2026-02-10 09:00:14 [weather-bot] INFO: GET /weather 200 - 143ms - 5 cities refreshed
+2026-02-10 09:30:14 [weather-bot] INFO: GET /weather 200 - 21ms - cache hit for all cities
+2026-02-10 10:00:14 [weather-bot] INFO: GET /weather 200 - 140ms - 5 cities refreshed
+2026-02-10 10:15:22 [weather-bot] INFO: GET /weather 200 - 136ms - 5 cities refreshed
+2026-02-10 10:30:03 [weather-bot] INFO: GET /health 200 - 1ms
+2026-02-10 11:00:14 [weather-bot] INFO: GET /weather 200 - 144ms - 5 cities refreshed
+2026-02-10 11:30:14 [weather-bot] INFO: GET /weather 200 - 23ms - cache hit for all cities
+2026-02-10 12:00:14 [weather-bot] INFO: GET /weather 200 - 139ms - 5 cities refreshed
+2026-02-10 12:30:01 [weather-bot] INFO: GET /health 200 - 1ms
+2026-02-10 13:00:14 [weather-bot] INFO: GET /weather 200 - 142ms - 5 cities refreshed

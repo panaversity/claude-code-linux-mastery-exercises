@@ -1,0 +1,35 @@
+=== Users ===
+$ cat /etc/passwd | grep -E "(agent|support|bot)"
+# (no output -- the supportagent user is MISSING)
+
+$ id supportagent
+id: 'supportagent': no such user
+
+=== File System ===
+$ ls /opt/support-agent/
+main.py  requirements.txt  .venv/  data/  .env
+
+$ ls /opt/support-agent/venv/
+ls: cannot access '/opt/support-agent/venv/': No such file or directory
+
+$ ls /opt/support-agent/.venv/bin/python
+/opt/support-agent/.venv/bin/python
+
+=== Ports ===
+$ ss -tlnp | grep 8080
+LISTEN  0  128  0.0.0.0:8080  0.0.0.0:*  users:(("node",pid=8842,fd=19))
+
+$ ps aux | grep 8842
+www-data  8842  0.5  2.1  node /opt/internal-dashboard/server.js
+
+=== Recent Changes ===
+$ last -5
+admin    pts/0    10.0.1.50    Mon Feb 10 08:45   still logged in
+admin    pts/0    10.0.1.50    Sun Feb  9 14:22 - 16:45  (02:23)
+
+$ grep -r "userdel" /var/log/auth.log
+Feb  9 15:01:23 prod-server-01 userdel[9921]: delete user 'supportagent'
+Feb  9 15:01:23 prod-server-01 userdel[9921]: removed group 'supportagent'
+
+$ apt list --upgradable 2>/dev/null | head
+python3.11/jammy-updates 3.11.8-1ubuntu1 amd64 [upgradable from: 3.11.7-1ubuntu1]

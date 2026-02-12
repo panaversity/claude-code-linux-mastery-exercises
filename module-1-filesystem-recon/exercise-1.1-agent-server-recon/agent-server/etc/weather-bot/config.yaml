@@ -1,0 +1,44 @@
+# Weather Bot Configuration
+# Last updated: 2026-01-15 by ops-team
+
+server:
+  host: 0.0.0.0
+  port: 8001
+  workers: 2
+
+weather_api:
+  provider: openweathermap
+  # API key loaded from environment variable WEATHER_API_KEY
+  update_interval: 300  # seconds
+  timeout: 30
+  retry_count: 3
+
+cities:
+  - name: San Francisco
+    lat: 37.7749
+    lon: -122.4194
+  - name: New York
+    lat: 40.7128
+    lon: -74.0060
+  - name: London
+    lat: 51.5074
+    lon: -0.1278
+  - name: Tokyo
+    lat: 35.6762
+    lon: 139.6503
+  - name: Sydney
+    lat: -33.8688
+    lon: 151.2093
+
+cache:
+  backend: redis
+  host: localhost
+  port: 6379
+  ttl: 600
+
+logging:
+  level: INFO
+  file: /var/log/weather-bot/access.log
+  error_file: /var/log/weather-bot/error.log
+  rotation: daily
+  retention: 30

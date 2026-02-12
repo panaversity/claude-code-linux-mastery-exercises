@@ -1,0 +1,28 @@
+[Unit]
+Description=Weather Bot - Real-time weather data aggregation agent
+Documentation=https://internal.wiki/agents/weather-bot
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=weatherbot
+Group=weatherbot
+WorkingDirectory=/opt/weather-bot
+ExecStart=/usr/bin/python3 /opt/weather-bot/main.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=weather-bot
+
+EnvironmentFile=/opt/weather-bot/.env
+Environment=PYTHONUNBUFFERED=1
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/log/weather-bot /var/lib/weather-bot
+
+[Install]
+WantedBy=multi-user.target

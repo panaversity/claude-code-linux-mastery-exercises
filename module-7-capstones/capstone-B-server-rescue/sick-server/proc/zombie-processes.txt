@@ -1,0 +1,24 @@
+# Simulated output of: ps aux | grep python | grep -v grep
+# Captured at: 2026-02-10 10:00:00 UTC
+#
+# The three <defunct> processes are zombies from previous deployments that crashed.
+# They were orphaned when their parent process (a deployment script) exited
+# without waiting for them. Each is consuming ~300MB of resident memory.
+#
+# The 'Z' state means zombie -- the process has exited but its parent hasn't
+# collected its exit status. The 'R' state is the currently running support-agent.
+# The 'S' state is the sleeping weather-bot.
+
+USER       PID  %CPU  %MEM    VSZ    RSS  TTY  STAT  START   TIME  COMMAND
+support   8001   0.0   7.5 324568 307200  ?    Z     Feb09   0:00  [python] <defunct>
+support   8234   0.0   7.2 318792 294912  ?    Z     Feb09   0:00  [python] <defunct>
+support   8567   0.0   7.8 331776 319488  ?    Z     Feb09   0:00  [python] <defunct>
+support  14523  45.2   3.1 198456 126976  ?    R     10:00   2:15  python /opt/support-agent/main.py
+weather   5001   0.1   1.5  98304  61440  ?    S     Feb10   0:30  python /opt/weather-bot/main.py
+
+# Total memory consumed by zombies: ~900MB (307200 + 294912 + 319488 KB)
+# On a 4GB server, that is ~22% of total RAM wasted on dead processes.
+#
+# These zombies likely originated from the rapid restart cycle (RestartSec=0)
+# when the support-agent kept crashing and restarting. Some child processes
+# from previous runs were not properly reaped.

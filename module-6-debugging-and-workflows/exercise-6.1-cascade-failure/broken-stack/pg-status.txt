@@ -1,0 +1,7 @@
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/lib/systemd/system/postgresql.service; enabled)
+     Active: active (exited) since Mon 2026-02-10 06:00:00 UTC; 3h ago
+   Main PID: 2345
+
+$ pg_isready
+/var/run/postgresql:5432 - accepting connections

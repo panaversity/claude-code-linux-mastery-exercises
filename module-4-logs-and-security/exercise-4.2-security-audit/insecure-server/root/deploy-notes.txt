@@ -1,0 +1,46 @@
+Deploy Notes - Agent Application
+=================================
+Last updated: 2025-09-22 by admin@company.com
+
+Server Information:
+  Production:   prod-agent-01.company.com (10.0.1.50)
+  Staging:      staging-agent-01.company.com (10.0.1.100)
+  Database:     db-prod-01.internal.company.com (10.0.1.20)
+  Redis:        redis-prod-01.internal.company.com (10.0.1.21)
+  Load Balancer: lb-01.company.com (10.0.1.10)
+
+SSH Access:
+  - Use admin account: ssh admin@10.0.1.50
+  - Root access available with: su - (password same as admin)
+  - Key-based auth preferred but password works too
+
+Deployment Steps:
+  1. SSH into prod-agent-01
+  2. cd /opt/agent-app
+  3. git pull origin main
+  4. source .venv/bin/activate
+  5. pip install -r requirements.txt
+  6. sudo systemctl restart agent-app
+  7. Check health: curl http://localhost:8080/api/health
+  8. Monitor logs: tail -f /var/log/agent-app/access.log
+
+Rollback:
+  1. git log --oneline -5  (find the previous commit)
+  2. git checkout <commit-hash>
+  3. sudo systemctl restart agent-app
+
+Database Migrations:
+  - Run from /opt/agent-app: alembic upgrade head
+  - Rollback: alembic downgrade -1
+  - Connection: psql -U agent_svc -h 10.0.1.20 -d agent_production
+
+Monitoring:
+  - Sentry: https://sentry.io/organizations/company/projects/agent-app/
+  - Grafana: https://grafana.internal.company.com/d/agent-app
+  - Slack alerts: #agent-app-alerts channel
+
+Known Issues:
+  - Memory usage creeps up over 24hrs, restart weekly via cron
+  - Firewall rules not configured yet (using security group only)
+  - Log rotation not set up, manually truncate when disk fills
+  - SSL cert managed by load balancer, not on the server itself

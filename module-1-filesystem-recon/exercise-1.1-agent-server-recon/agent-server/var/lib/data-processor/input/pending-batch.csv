@@ -1,0 +1,16 @@
+id,name,email,amount,currency,created_at
+1001,Alice Johnson,alice@example.com,149.99,USD,2026-02-09T14:23:01Z
+1002,Bob Smith,bob.smith@example.com,89.50,USD,2026-02-09T14:25:33Z
+1003,Charlie Davis,charlie.d@example.com,234.00,EUR,2026-02-09T14:30:17Z
+1004,Diana Martinez,diana.m@example.com,56.75,USD,2026-02-09T15:01:44Z
+1005,Eric Wang,eric.wang@example.com,178.20,USD,2026-02-09T15:12:08Z
+1006,Fatima Al-Hassan,fatima.ah@example.com,312.00,GBP,2026-02-09T15:33:29Z
+1007,George Kim,george.k@example.com,45.00,USD,2026-02-09T16:01:55Z
+1008,Hannah Brown,hannah.b@example.com,99.99,USD,2026-02-09T16:15:42Z
+1009,Ivan Petrov,ivan.p@example.com,267.50,EUR,2026-02-09T16:28:11Z
+1010,Julia Chen,julia.chen@example.com,185.75,USD,2026-02-09T17:00:03Z
+1011,Kevin O'Brien,kevin.ob@example.com,73.25,USD,2026-02-09T17:14:37Z
+1012,Lisa Nakamura,lisa.n@example.com,441.00,JPY,2026-02-09T17:30:22Z
+1013,Michael Torres,michael.t@example.com,128.50,USD,2026-02-09T18:02:15Z
+1014,Nina Kowalski,nina.k@example.com,92.00,EUR,2026-02-09T18:15:48Z
+1015,Oscar Larsson,oscar.l@example.com,210.33,SEK,2026-02-09T18:44:01Z

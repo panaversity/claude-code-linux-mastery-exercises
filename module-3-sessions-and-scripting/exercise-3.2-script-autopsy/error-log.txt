@@ -1,0 +1,93 @@
+====================================================================
+CI Run #1247 — deploy.sh with argument "production"
+Runner: ubuntu-22.04-fresh (clean VM, no prior deployments)
+Exit code: 1
+====================================================================
+
+$ ./deploy.sh production
+======================================
+  Deploying customer-support-agent
+  Environment: production
+  Date: Mon Feb 10 14:32:01 UTC 2026
+======================================
+
+[Step 1] Validating environment...
+  Target environment: production
+
+[Step 2] Checking deploy user...
+  Creating user 'supportagent'...
+  User created
+
+[Step 3] Copying application files...
+  Copying app files to /opt/customer-support-agent/
+cp: cannot create regular file '/opt/customer-support-agent/main.py': No such file or directory
+cp: cannot create regular file '/opt/customer-support-agent/requirements.txt': No such file or directory
+cp: cannot stat '/opt/customer-support-agent/templates/': No such file or directory
+  Copying config to /etc/customer-support-agent/
+cp: cannot create regular file '/etc/customer-support-agent/config.yaml': No such file or directory
+  Files copied successfully
+
+[Step 4] Setting permissions...
+chmod: cannot access '/etc/customer-support-agent/config.yaml': No such file or directory
+chown: cannot access '/opt/customer-support-agent': No such file or directory
+chown: cannot access '/etc/customer-support-agent': No such file or directory
+chown: cannot access '/var/log/customer-support-agent': No such file or directory
+  Permissions set
+
+[Step 5] Checking port availability...
+  Port 8080 is available
+
+[Step 6] Installing systemd service...
+  Starting customer-support-agent...
+Job for customer-support-agent.service failed because the service did not take the steps required by its unit configuration.
+See "systemctl status customer-support-agent.service" and "journalctl -xe" for details.
+
+[Step 7] Verifying deployment...
+  Deployment FAILED
+  Status: failed
+  Check logs: journalctl -u customer-support-agent --no-pager -n 50
+
+
+====================================================================
+CI Run #1248 — deploy.sh with NO argument (regression test)
+Runner: ubuntu-22.04-fresh (clean VM)
+Exit code: 2
+====================================================================
+
+$ ./deploy.sh
+======================================
+  Deploying customer-support-agent
+  Environment:
+  Date: Mon Feb 10 14:35:22 UTC 2026
+======================================
+
+[Step 1] Validating environment...
+./deploy.sh: line 23: [: =: unary operator expected
+  ERROR: Invalid environment ''
+  Usage: ./deploy.sh <production|staging>
+
+
+====================================================================
+NOTES FROM CI ENGINEER:
+====================================================================
+
+1. Run #1247: Script reported "Files copied successfully" even though
+   every cp command failed. It just kept going. This is dangerous —
+   we set permissions on files that don't exist and tried to start
+   a service with no binary. The script needs to STOP on first error.
+
+2. Run #1248: When called with no argument, we get a bash syntax error
+   instead of our nice usage message. The [ ] test can't handle empty
+   variables.
+
+3. I also noticed the script makes config.yaml executable (755) but
+   main.py (the actual program) has no explicit permissions set. Seems
+   backwards — the config should be 644 and main.py should be 755.
+
+4. The directories /opt/customer-support-agent/, /etc/customer-support-agent/,
+   and /var/log/customer-support-agent/ are never created. On my dev machine
+   they existed from a previous manual install, which is why it "worked" there.
+
+5. Minor: the port check uses string comparison (=) instead of numeric
+   comparison (-eq) for the wc -l output. Works by accident most of the
+   time but it's wrong and could break with unexpected output.

@@ -1,0 +1,26 @@
+{"timestamp":"2026-02-10T06:00:05.123Z","level":"info","message":"Support Agent listening on port 8002","service":"support-agent"}
+{"timestamp":"2026-02-10T06:00:05.125Z","level":"info","message":"Model: gpt-4","service":"support-agent"}
+{"timestamp":"2026-02-10T06:00:05.126Z","level":"info","message":"Knowledge base: /opt/support-agent/kb/","service":"support-agent"}
+{"timestamp":"2026-02-10T06:02:14.331Z","level":"info","message":"POST /chat session=sess_a1b2c3 tokens=347","service":"support-agent"}
+{"timestamp":"2026-02-10T06:05:22.118Z","level":"info","message":"POST /chat session=sess_a1b2c3 tokens=412","service":"support-agent"}
+{"timestamp":"2026-02-10T06:08:44.901Z","level":"info","message":"POST /chat session=sess_d4e5f6 tokens=289","service":"support-agent"}
+{"timestamp":"2026-02-10T06:12:03.445Z","level":"info","message":"POST /chat session=sess_a1b2c3 tokens=523","service":"support-agent"}
+{"timestamp":"2026-02-10T06:15:00.001Z","level":"info","message":"GET /health 200","service":"support-agent"}
+{"timestamp":"2026-02-10T06:18:37.221Z","level":"warn","message":"Rate limit approaching for IP 203.0.113.42 (55/60 rpm)","service":"support-agent"}
+{"timestamp":"2026-02-10T06:19:01.887Z","level":"error","message":"Rate limit exceeded for IP 203.0.113.42","service":"support-agent"}
+{"timestamp":"2026-02-10T06:22:15.334Z","level":"info","message":"POST /chat session=sess_g7h8i9 tokens=198","service":"support-agent"}
+{"timestamp":"2026-02-10T06:30:00.001Z","level":"info","message":"GET /health 200","service":"support-agent"}
+{"timestamp":"2026-02-10T06:35:42.667Z","level":"info","message":"POST /chat session=sess_j0k1l2 tokens=445","service":"support-agent"}
+{"timestamp":"2026-02-10T06:41:18.992Z","level":"warn","message":"OpenAI API latency high: 4823ms for session sess_j0k1l2","service":"support-agent"}
+{"timestamp":"2026-02-10T06:45:00.001Z","level":"info","message":"GET /health 200","service":"support-agent"}
+{"timestamp":"2026-02-10T06:48:55.113Z","level":"info","message":"POST /chat session=sess_m3n4o5 tokens=267","service":"support-agent"}
+{"timestamp":"2026-02-10T07:00:00.001Z","level":"info","message":"GET /health 200","service":"support-agent"}
+{"timestamp":"2026-02-10T07:02:33.778Z","level":"info","message":"POST /chat session=sess_p6q7r8 tokens=391","service":"support-agent"}
+{"timestamp":"2026-02-10T07:15:00.001Z","level":"info","message":"GET /health 200","service":"support-agent"}
+{"timestamp":"2026-02-10T07:18:21.456Z","level":"info","message":"GET /admin/sessions active=4","service":"support-agent"}
+{"timestamp":"2026-02-10T07:22:09.334Z","level":"info","message":"Session expired: sess_a1b2c3 (30min TTL)","service":"support-agent"}
+{"timestamp":"2026-02-10T07:30:00.001Z","level":"info","message":"GET /health 200","service":"support-agent"}
+{"timestamp":"2026-02-10T07:45:00.001Z","level":"info","message":"GET /health 200","service":"support-agent"}
+{"timestamp":"2026-02-10T08:00:00.001Z","level":"info","message":"GET /health 200","service":"support-agent"}
+{"timestamp":"2026-02-10T08:03:17.889Z","level":"error","message":"OpenAI API error: 503 Service Unavailable - retrying in 5s","service":"support-agent"}
+{"timestamp":"2026-02-10T08:03:23.112Z","level":"info","message":"OpenAI API retry successful for session sess_s9t0u1","service":"support-agent"}

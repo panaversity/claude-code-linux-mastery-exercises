@@ -1,0 +1,29 @@
+# Server Baseline -- prod-server-01
+# OS: Ubuntu 22.04 LTS
+# CPU: 2 cores
+# RAM: 4GB
+# Disk: 40GB SSD
+
+# Installed:
+# - Python 3.11
+# - pip3
+# - systemd
+# - openssh-server (running, password auth currently enabled)
+# - ufw (inactive)
+# - redis-server (installed but not started)
+
+# Users:
+# - root (active)
+# - admin (sudoer, your login account)
+
+# Network:
+# - Public IP: 203.0.113.50
+# - SSH on port 22
+# - No other ports open
+# - No firewall rules configured
+
+# Current state:
+# This is a fresh server provisioned for your agent deployment.
+# No agents have been deployed before.
+# Redis is installed but not running.
+# PostgreSQL is NOT installed (not needed for this agent version).
