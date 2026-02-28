@@ -1,0 +1,8 @@
+# journalctl -u social-monitor --since "2h ago"
+
+Jan 20 01:05:00 agent-prod-01 python3[5100]: Checking brand mentions...
+Jan 20 02:05:00 agent-prod-01 python3[5100]: Checking brand mentions...
+Jan 20 03:05:00 agent-prod-01 python3[5100]: PermissionError: [Errno 13] Permission denied: '/opt/agents/social-monitor/data/output.json'
+Jan 20 03:05:00 agent-prod-01 python3[5100]: Traceback: ... os.open() failed due to ENOSPC masking as EACCES
+Jan 20 03:05:00 agent-prod-01 systemd[1]: social-monitor.service: Main process exited, code=exited, status=1/FAILURE
+# NOTE: "Permission denied" can occur when disk is full — the OS cannot allocate new inodes

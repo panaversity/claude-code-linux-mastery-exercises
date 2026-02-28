@@ -1,0 +1,26 @@
+# du -sh /* | sort -rh | head -10
+
+28G     /var
+12G     /opt
+5.2G    /usr
+2.1G    /home
+1.8G    /tmp
+512M    /boot
+128M    /etc
+64M     /root
+
+# du -sh /var/* | sort -rh | head -5
+25G     /var/log
+2.1G    /var/lib
+512M    /var/cache
+128M    /var/tmp
+
+# du -sh /var/log/* | sort -rh | head -5
+11G     /var/log/agent-app/report-generator.log       # <-- NEVER ROTATED!
+8.5G    /var/log/agent-app/competitor-tracker.log      # <-- NEVER ROTATED!
+4.2G    /var/log/agent-app/social-monitor.log          # <-- NEVER ROTATED!
+1.1G    /var/log/syslog
+256M    /var/log/auth.log
+
+# ROOT CAUSE: Agent log files were never configured with logrotate.
+# Over 92 days of uptime, they grew to consume 23.7GB of the 50GB root filesystem.

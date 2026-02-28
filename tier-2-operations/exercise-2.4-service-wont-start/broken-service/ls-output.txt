@@ -1,0 +1,13 @@
+# Output of: ls -la /opt/agents/competitor-tracker/
+
+total 32
+drwxr-xr-x 6 tracker tracker 4096 Jan 14 12:00 .
+drwxr-xr-x 4 root    root    4096 Jan 10 09:00 ..
+drwxr-xr-x 3 tracker tracker 4096 Jan 14 12:00 .venv      # <-- virtualenv is HERE (not venv/)
+drwxr-xr-x 2 tracker tracker 4096 Jan 14 12:00 config
+dr-xr-xr-x 2 tracker tracker 4096 Jan 14 15:00 logs       # <-- READ-ONLY! Someone ran chmod incorrectly
+drwxr-xr-x 2 tracker tracker 4096 Jan 14 12:00 src
+drwxr-xr-x 2 tracker tracker 4096 Jan 14 12:00 data
+
+# Note: venv/ does NOT exist. The virtualenv is at .venv/
+# Note: logs/ has permissions dr-xr-xr-x (read+execute only, no write!)

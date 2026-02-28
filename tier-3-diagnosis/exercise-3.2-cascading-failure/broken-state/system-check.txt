@@ -1,0 +1,21 @@
+# System-level diagnostics
+
+$ df -h
+Filesystem      Size  Used Avail Use%  Mounted on
+/dev/sda1        50G   50G     0 100%  /
+tmpfs           2.0G   12M  2.0G   1%  /dev/shm
+/dev/sdb1       100G   45G   50G  47%  /data
+
+# ROOT FILESYSTEM IS 100% FULL!
+
+$ free -h
+              total        used        free
+Mem:          3.8Gi       2.1Gi       1.2Gi
+Swap:         2.0Gi       128Mi       1.9Gi
+
+# Memory is fine.
+
+$ uptime
+ 03:15:00 up 92 days, 14:30,  0 users,  load average: 0.05, 0.08, 0.12
+
+# Load is fine.

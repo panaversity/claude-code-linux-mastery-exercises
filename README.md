@@ -1,99 +1,80 @@
-# Claude Code: Linux Mastery Exercises
+# Claude Code: Linux Operations Exercises
 
-**Master Linux System Administration Through Agent Deployment Scenarios**
+**Practice exercises for Chapter 11: Linux Mastery for Digital FTEs**
 
-Practice exercises for Chapter 10: Linux Mastery for Digital FTEs. These exercises take you from navigating server filesystems through scripting deployments, securing servers, managing systemd services, and debugging production failures -- building the operational skills that separate "it works on my laptop" from "it runs in production."
+14 hands-on exercises across 3 tiers that take you from navigating server filesystems to diagnosing cascading production failures. Every exercise puts you in Ali's shoes — you direct Claude Code, read the output, and make decisions.
 
 ## Package Structure
 
 ```
 claude-code-linux-mastery-exercises/
-├── EXERCISE-GUIDE.md                              # Full guide with rubrics and framework
-├── README.md                                      # This file
-├── scoring-rubric.md                              # Per-module scoring criteria
-├── module-1-filesystem-recon/
-│   ├── exercise-1.1-agent-server-recon/           (Build: Map a running agent server)
-│   └── exercise-1.2-misplaced-deployment/         (Debug: Fix files in wrong directories)
-├── module-2-text-and-pipes/
-│   ├── exercise-2.1-config-pipeline/              (Build: Assemble configs from fragments)
-│   └── exercise-2.2-broken-pipeline/              (Debug: Find the corrupted pipe stage)
-├── module-3-sessions-and-scripting/
-│   ├── exercise-3.1-tmux-control-center/          (Build: Create monitoring session)
-│   └── exercise-3.2-script-autopsy/               (Debug: Fix 5 bugs in deploy script)
-├── module-4-logs-and-security/
-│   ├── exercise-4.1-agent-log-forensics/          (Build: Extract metrics from logs)
-│   └── exercise-4.2-security-audit/               (Apply: Audit server for violations)
-├── module-5-networking-and-services/
-│   ├── exercise-5.1-systemd-from-scratch/         (Build: Write complete service file)
-│   └── exercise-5.2-why-wont-it-start/            (Debug: Diagnose 3 startup failures)
-├── module-6-debugging-and-workflows/
-│   ├── exercise-6.1-cascade-failure/              (Build: Trace HTTP 502 to root cause)
-│   └── exercise-6.2-deploy-pipeline/              (Build: Chain all skills into deploy script)
-└── module-7-capstones/
-    ├── capstone-A-full-production-deployment/      (End-to-end spec-first deployment)
-    ├── capstone-B-server-rescue/                   (Fix 7 simultaneous server problems)
-    └── capstone-C-your-own-agent/                  (Deploy your own project)
+├── EXERCISE-GUIDE.md                                # Full guide with rubrics and framework
+├── README.md                                        # This file
+├── tier-1-foundation/                               # Lessons 1-2: Navigation and reading
+│   ├── exercise-1.1-server-orientation/             (Build: Explore a new server)
+│   ├── exercise-1.2-mystery-server/                 (Debug: Find and diagnose an abandoned agent)
+│   ├── exercise-1.3-reading-the-room/               (Build: Interpret server health output)
+│   └── exercise-1.4-permission-puzzle/              (Debug: Diagnose permission errors)
+├── tier-2-operations/                               # Lessons 3-5: Building infrastructure
+│   ├── exercise-2.1-agent-home-setup/               (Build: Create project directory structure)
+│   ├── exercise-2.2-missing-pieces/                 (Debug: Fix an intern's broken setup)
+│   ├── exercise-2.3-service-from-scratch/           (Build: Write a systemd service)
+│   ├── exercise-2.4-service-wont-start/             (Debug: Find 3 root causes in a failed service)
+│   ├── exercise-2.5-lock-it-down/                   (Build: Harden a deployment's security)
+│   └── exercise-2.6-overprivileged-agent/           (Debug: Security audit with 5 findings)
+└── tier-3-diagnosis/                                # Lessons 6-7: Systematic debugging
+    ├── exercise-3.1-silent-agent/                   (Debug: Agent running but not working)
+    ├── exercise-3.2-cascading-failure/              (Debug: 3 agents down, 1 root cause)
+    ├── exercise-3.3-deployment-spec/                (Build: Write a complete deployment spec)
+    └── exercise-3.4-spec-vs-reality/               (Debug: Find gaps between spec and server)
 ```
 
 ## Getting Started
 
 ### Prerequisites
 
-- **Claude Code** (required): All exercises involve real Linux system operations in the terminal. Install Claude Code following the instructions at https://docs.anthropic.com/en/docs/claude-code.
-- **Linux/WSL2 environment** (required): Exercises require a Linux system or Windows Subsystem for Linux 2. macOS works for most exercises but some systemd and networking exercises require a full Linux environment.
-- **Root or sudo access** (recommended): Several exercises involve service management, user creation, and firewall configuration that require elevated privileges.
+- **Claude Code** (required): All exercises involve directing Claude Code to investigate and fix Linux scenarios. Install following the instructions at https://docs.anthropic.com/en/docs/claude-code.
+- **No live server required**: Exercises use simulated server output files. You practice reading and interpreting output, then directing Claude Code — no SSH or root access needed.
 
 ### Setup
 
 1. Download or clone this repository
 2. Open a terminal in the repository root
 3. Launch Claude Code: `claude`
-4. Start with Module 1 and work sequentially
+4. Start with Tier 1 and work sequentially
 
 ### Recommended Order
 
-Work through modules in order. Each module builds on skills from the previous one.
+Work through tiers in order. Each tier builds on skills from the previous one.
 
-| Module | Focus | Time |
-|--------|-------|------|
-| Module 1: Filesystem Recon | Navigate and fix agent server layouts | 30-60 min |
-| Module 2: Text & Pipes | Config assembly and pipeline debugging | 30-60 min |
-| Module 3: Sessions & Scripting | tmux monitoring and bash script debugging | 45-90 min |
-| Module 4: Logs & Security | Log analysis and security auditing | 45-90 min |
-| Module 5: Networking & Services | systemd service files and startup debugging | 45-90 min |
-| Module 6: Debugging & Workflows | Production troubleshooting and deployment pipelines | 45-90 min |
-| Module 7: Capstones | Integration projects (pick one+) | 2-4 hrs each |
+| Tier | Focus | Exercises | Time |
+|------|-------|-----------|------|
+| Tier 1: Foundation | Server navigation, reading output, permissions | 1.1 – 1.4 | 60-90 min |
+| Tier 2: Operations | Directory setup, systemd, security hardening | 2.1 – 2.6 | 90-120 min |
+| Tier 3: Diagnosis | LNPS method, cascading failures, deployment specs | 3.1 – 3.4 | 60-90 min |
 
-## Linux Operations Framework
+## The LNPS Debugging Method
 
-Every Linux operation in this course follows a 7-step framework. Memorize this. It becomes second nature.
+Tier 3 exercises use the LNPS triage method. Follow this order for every diagnosis:
 
-1. **Investigate** -- What is the current state? Check before assuming. Run `ps`, `ss`, `systemctl`, `df`, `ls` before changing anything.
-2. **Plan** -- Design your approach before executing. Write down what you intend to change and what the expected outcome is.
-3. **Backup** -- Safety net before destructive changes. Copy configs before editing. Snapshot before upgrading. No exceptions.
-4. **Execute** -- One change at a time. Never combine multiple changes into a single operation. If something breaks, you need to know which change caused it.
-5. **Verify** -- Did it work? Check with specific commands. `systemctl status`, `curl localhost`, `journalctl -u service`. Trust output, not assumptions.
-6. **Document** -- Record what you did and why. Future-you will not remember why you changed that firewall rule at 2 AM.
-7. **Automate** -- If you did it twice, script it. Manual repetition is where human error lives.
+1. **Logs** — What do the logs say? Read before guessing.
+2. **Network** — Can the service reach what it needs? Check ports and connectivity.
+3. **Process** — Is the process alive? What state is it in?
+4. **System** — Are disk, memory, and CPU okay?
 
-You will practice each step individually in Modules 1-6, then chain them together in the capstones.
+## Exercise Workflow
 
-## Assessment
+For every exercise:
 
-See EXERCISE-GUIDE.md for the full assessment rubric covering:
-- Investigation Quality
-- Operations Safety
-- Security Awareness
-- Debugging Methodology
-- Automation Quality
-- Documentation
-
-See scoring-rubric.md for per-module scoring criteria and self-assessment questions.
+1. **Read INSTRUCTIONS.md** in the exercise folder
+2. **Examine the starter files** — simulated server output, configs, logs
+3. **Direct Claude Code** to investigate and diagnose
+4. **Create the deliverable** (report, fix plan, audit, or spec)
+5. **Reflect** using the questions in INSTRUCTIONS.md
 
 ## Tips
 
 - **Read INSTRUCTIONS.md first** in each exercise before opening Claude Code
-- **Never skip the investigation step** -- even when you think you know what is wrong
-- **Treat every exercise like a production server** -- build the habit of safety-first operations even when nothing is at stake
-- **Reflect honestly** -- the reflection questions are where real learning happens
-- **Keep your deliverables** -- SERVER-MAP.md, SECURITY-REPORT.md, deploy scripts, and similar outputs are your portfolio of operational skills
+- **Never skip the investigation step** — even when you think you know what is wrong
+- **For Debug exercises**: read the broken state carefully before attempting any fix
+- **Reflect honestly** — the reflection questions are where real learning happens

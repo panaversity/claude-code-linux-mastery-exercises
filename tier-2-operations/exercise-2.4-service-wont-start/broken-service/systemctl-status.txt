@@ -1,0 +1,9 @@
+● competitor-tracker.service - Competitor Tracker Agent
+     Loaded: loaded (/etc/systemd/system/competitor-tracker.service; enabled)
+     Active: failed (Result: exit-code) since Mon 2024-01-15 06:00:01 UTC; 3h ago
+    Process: 12345 ExecStart=/opt/agents/competitor-tracker/venv/bin/python3 /opt/agents/competitor-tracker/src/main.py (code=exited, status=1/FAILURE)
+   Main PID: 12345 (code=exited, status=1/FAILURE)
+
+Jan 15 06:00:01 agent-prod-01 systemd[1]: Started Competitor Tracker Agent.
+Jan 15 06:00:01 agent-prod-01 systemd[1]: competitor-tracker.service: Main process exited, code=exited, status=1/FAILURE
+Jan 15 06:00:01 agent-prod-01 systemd[1]: competitor-tracker.service: Failed with result 'exit-code'.

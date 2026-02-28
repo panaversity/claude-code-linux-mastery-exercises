@@ -1,0 +1,22 @@
+# Output of: ls -la (various paths)
+# Ali is logged in as user 'ali' in group 'ali'
+
+# Problem 1: Log file Ali cannot read
+# Path: /var/log/agent-tracker.log
+-rw------- 1 root root 45230 Jan 15 09:00 /var/log/agent-tracker.log
+
+# Problem 2: Config directory Ali cannot enter
+# Path: /opt/agents/tracker/config/
+drwx------ 2 www-data www-data 4096 Jan 14 12:00 /opt/agents/tracker/config/
+
+# Problem 3: Script Ali cannot execute
+# Path: /opt/agents/tracker/src/start.sh
+-rw-r--r-- 1 ali ali 1024 Jan 14 11:00 /opt/agents/tracker/src/start.sh
+
+# Problem 4: .env file that is TOO OPEN
+# Path: /opt/agents/tracker/config/.env
+-rw-rw-rw- 1 ali ali 256 Jan 14 11:30 /opt/agents/tracker/config/.env
+
+# For reference — a correctly configured file:
+# -rw-r----- 1 tracker tracker 45230 Jan 15 09:00 /var/log/agent-tracker.log
+# (owner can read/write, group can read, others have no access)

@@ -1,8 +1,0 @@
-david           35 requests
-eve             33 requests
-alice           26 requests
-charlie         23 requests
-bob             19 requests
-2026-02-10      1 requests
-2026-02-10      1 requests
-2026-02-10      1 requests

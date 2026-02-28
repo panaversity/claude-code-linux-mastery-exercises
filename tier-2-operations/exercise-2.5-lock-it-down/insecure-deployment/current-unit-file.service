@@ -1,0 +1,16 @@
+[Unit]
+Description=Social Media Monitor
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/agents/social-monitor/src/main.py
+EnvironmentFile=/opt/agents/social-monitor/config/.env
+User=root
+# SECURITY ISSUE: Running as root!
+WorkingDirectory=/opt/agents/social-monitor
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

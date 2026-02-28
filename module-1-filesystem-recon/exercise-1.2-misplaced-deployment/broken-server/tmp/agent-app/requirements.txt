@@ -1,5 +1,0 @@
-# Summarizer Agent dependencies
-flask==3.0.1
-openai==4.28.0
-pyyaml==6.0.1
-gunicorn==21.2.0

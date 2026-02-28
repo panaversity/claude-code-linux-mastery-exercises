@@ -1,0 +1,16 @@
+# Simulated system resource check
+
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        50G   22G   26G  46% /
+/dev/sdb1       100G   35G   60G  37% /data
+
+$ free -h
+              total        used        free
+Mem:          3.8Gi       1.8Gi       1.5Gi
+Swap:         2.0Gi        64Mi       1.9Gi
+
+$ uptime
+ 09:00:22 up 50 days,  6:22,  1 user,  load average: 0.35, 0.28, 0.22
+
+# System resources are FINE. This is not a resource problem.

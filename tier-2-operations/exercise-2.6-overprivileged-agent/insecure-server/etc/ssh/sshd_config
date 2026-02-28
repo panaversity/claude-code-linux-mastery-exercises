@@ -1,0 +1,9 @@
+# SSH Server Configuration
+Port 22
+ListenAddress 0.0.0.0
+PermitRootLogin yes
+PasswordAuthentication yes
+# SECURITY ISSUE: Password auth should be disabled!
+# SECURITY ISSUE: Root login should be disabled!
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
