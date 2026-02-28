@@ -1,0 +1,15 @@
+-- Journal entries for competitor-tracker.service --
+Jan 15 06:00:01 agent-prod-01 systemd[1]: Starting Competitor Tracker Agent...
+Jan 15 06:00:01 agent-prod-01 python3[12345]: /opt/agents/competitor-tracker/venv/bin/python3: No such file or directory
+Jan 15 06:00:01 agent-prod-01 systemd[1]: competitor-tracker.service: Main process exited, code=exited, status=1/FAILURE
+Jan 15 06:00:01 agent-prod-01 systemd[1]: competitor-tracker.service: Failed with result 'exit-code'.
+
+-- Previous attempt (manual run after fixing path) --
+Jan 15 07:30:00 agent-prod-01 python3[12400]: Traceback (most recent call last):
+Jan 15 07:30:00 agent-prod-01 python3[12400]:   File "/opt/agents/competitor-tracker/src/main.py", line 15, in <module>
+Jan 15 07:30:00 agent-prod-01 python3[12400]:     db_url = os.environ["DATABASE_URL"]
+Jan 15 07:30:00 agent-prod-01 python3[12400]: KeyError: 'DATABASE_URL'
+
+-- Previous attempt (after adding DATABASE_URL) --
+Jan 15 08:00:00 agent-prod-01 python3[12500]: Starting competitor tracker...
+Jan 15 08:00:00 agent-prod-01 python3[12500]: PermissionError: [Errno 13] Permission denied: '/opt/agents/competitor-tracker/logs/tracker.log'

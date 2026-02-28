@@ -1,0 +1,16 @@
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+
+# Allow SSH
+-A INPUT -p tcp --dport 22 -j ACCEPT
+
+# Allow agent port — EXPOSED TO ALL!
+# SECURITY ISSUE: Should be restricted to localhost or specific IPs
+-A INPUT -p tcp --dport 8080 -j ACCEPT
+
+# Allow all established connections
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+COMMIT

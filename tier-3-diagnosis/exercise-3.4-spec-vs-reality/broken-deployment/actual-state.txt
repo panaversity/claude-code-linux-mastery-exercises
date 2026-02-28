@@ -1,0 +1,39 @@
+# What actually exists on the server after deployment
+
+$ systemctl show -p User price-watcher
+User=root
+# WHY: The unit file was edited to add User=price-watcher, but `systemctl daemon-reload`
+# was never run afterward. systemd is still using the CACHED version with User=root.
+
+$ stat -c '%a %U:%G' /opt/agents/price-watcher/config/.env
+644 price-watcher:price-watcher
+# WHY: The chmod 600 command was accidentally run on /opt/agents/price-watcher/.env
+# (which doesn't exist) instead of /opt/agents/price-watcher/config/.env
+
+$ systemctl is-enabled price-watcher
+disabled
+# WHY: The deployment script ran `systemctl start price-watcher` but forgot
+# `systemctl enable price-watcher`. The service runs now but won't survive a reboot.
+
+$ systemctl is-active price-watcher
+active
+# This one passes — the service is currently running.
+
+$ cat /etc/systemd/system/price-watcher.service
+[Unit]
+Description=Price Watcher Agent
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/agents/price-watcher/src/main.py
+EnvironmentFile=/opt/agents/price-watcher/config/.env
+User=price-watcher
+Group=price-watcher
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+# NOTE: The file on disk IS correct (User=price-watcher).
+# But systemd hasn't reloaded it, so it's still running the old cached version.

@@ -1,0 +1,14 @@
+[Unit]
+Description=Weather Alert Agent
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /opt/mystery-agent/src/main.py
+EnvironmentFile=/opt/mystery-agent/.env
+User=root
+WorkingDirectory=/opt/mystery-agent
+
+[Timer]
+# Note: This is a .service file — the timer file is MISSING
+# The agent was supposed to run via weather-agent.timer but the timer was never created

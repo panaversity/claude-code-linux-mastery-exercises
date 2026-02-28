@@ -1,0 +1,3 @@
+# Output of: ls -la /opt/agents/report-generator/config/.env
+-rw-rw-rw- 1 root root 256 Jan 20 10:00 .env
+# ^ WRONG! 666 = everyone can read AND write!

@@ -1,0 +1,15 @@
+[Unit]
+Description=Report Generator Agent
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/agents/report-generator/src/main.py
+EnvironmentFile=/opt/agents/report-generator/config/.env
+User=root
+# SECURITY ISSUE: Running as root!
+WorkingDirectory=/opt/agents/report-generator
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

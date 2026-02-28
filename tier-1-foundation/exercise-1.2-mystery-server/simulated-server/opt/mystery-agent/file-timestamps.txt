@@ -1,0 +1,9 @@
+# File timestamps (simulates `stat` output)
+# In a real exercise, you would run: find /opt/mystery-agent -type f -exec stat --format='%n %y' {} \;
+
+/opt/mystery-agent/README.md                2024-01-10 08:30:00
+/opt/mystery-agent/src/main.py              2024-01-10 08:45:00
+/opt/mystery-agent/src/requirements.txt     2024-01-10 08:32:00
+/opt/mystery-agent/.env                     2024-01-10 08:35:00
+/opt/mystery-agent/logs/agent.log           2024-01-11 09:00:03
+/opt/mystery-agent/data/                    2024-01-10 15:00:02 (empty)

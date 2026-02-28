@@ -1,0 +1,17 @@
+# Server Information (simulated)
+# Run: uname -a / df -h / free -h on a real server
+
+Hostname: agent-prod-01
+Uptime: 47 days, 3:22
+Kernel: Linux 5.15.0-91-generic x86_64
+
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1        50G   18G   30G  38% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+/dev/sdb1       100G  2.1G   93G   3% /data
+
+              total        used        free
+Mem:          3.8Gi       1.2Gi       2.1Gi
+Swap:         2.0Gi       0.0Gi       2.0Gi
+
+Load average: 0.12 0.08 0.05

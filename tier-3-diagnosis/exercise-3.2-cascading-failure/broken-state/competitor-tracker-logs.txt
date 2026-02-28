@@ -1,0 +1,7 @@
+# journalctl -u competitor-tracker --since "2h ago"
+
+Jan 20 01:00:01 agent-prod-01 python3[5001]: Cycle complete. 15 competitors checked.
+Jan 20 02:00:01 agent-prod-01 python3[5001]: Cycle complete. 15 competitors checked.
+Jan 20 03:00:01 agent-prod-01 python3[5001]: OSError: [Errno 28] No space left on device
+Jan 20 03:00:01 agent-prod-01 python3[5001]: Failed to write to /opt/agents/competitor-tracker/logs/tracker.log
+Jan 20 03:00:01 agent-prod-01 systemd[1]: competitor-tracker.service: Main process exited, code=exited, status=1/FAILURE

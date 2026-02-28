@@ -1,0 +1,18 @@
+# Simulated output of process diagnostics
+
+$ systemctl status competitor-tracker
+● competitor-tracker.service - Competitor Tracker Agent
+     Loaded: loaded (/etc/systemd/system/competitor-tracker.service; enabled)
+     Active: active (running) since Fri 2024-01-10 06:00:01 UTC; 3 days ago
+   Main PID: 5001 (python3)
+      Tasks: 2 (limit: 4567)
+     Memory: 85.3M
+        CPU: 12min 34s
+   CGroup: /system.slice/competitor-tracker.service
+           └─5001 python3 /opt/agents/competitor-tracker/src/main.py
+
+$ ps aux | grep 5001
+tracker   5001  0.1  2.2 131072 85300 ?  S  Jan10  12:34 python3 /opt/agents/competitor-tracker/src/main.py
+
+# Process is ALIVE. It is consuming CPU (stuck in retry loop).
+# systemd reports "active (running)" because the process hasn't exited.

@@ -1,0 +1,18 @@
+[Unit]
+Description=Competitor Tracker Agent
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/agents/competitor-tracker/venv/bin/python3 /opt/agents/competitor-tracker/src/main.py
+# BUG: The virtualenv was moved to /opt/agents/competitor-tracker/.venv/ last week
+# The path /opt/agents/competitor-tracker/venv/ no longer exists!
+EnvironmentFile=/opt/agents/competitor-tracker/config/.env
+User=tracker
+Group=tracker
+Restart=on-failure
+RestartSec=10
+WorkingDirectory=/opt/agents/competitor-tracker
+
+[Install]
+WantedBy=multi-user.target

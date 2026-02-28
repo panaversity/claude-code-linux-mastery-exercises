@@ -1,0 +1,7 @@
+# journalctl -u report-generator --since "2h ago"
+
+Jan 20 02:30:00 agent-prod-01 python3[5200]: Generating daily report...
+Jan 20 02:30:05 agent-prod-01 python3[5200]: sqlite3.DatabaseError: database disk image is malformed
+Jan 20 02:30:05 agent-prod-01 python3[5200]: Failed to query /opt/agents/report-generator/data/reports.db
+Jan 20 02:30:05 agent-prod-01 systemd[1]: report-generator.service: Main process exited, code=exited, status=1/FAILURE
+# NOTE: SQLite corruption often occurs when writes fail mid-transaction due to disk full

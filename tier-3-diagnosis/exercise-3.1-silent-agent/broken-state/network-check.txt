@@ -1,0 +1,19 @@
+# Simulated output of network diagnostic commands
+
+$ ss -tlnp | grep 5432
+# (no output — nothing is listening on port 5432 locally)
+
+$ nc -zv db.internal.example.com 5432
+nc: connect to db.internal.example.com (10.0.1.50) port 5432 (tcp) failed: Connection timed out
+
+$ ping -c 3 db.internal.example.com
+PING db.internal.example.com (10.0.1.50) 56(84) bytes of data.
+64 bytes from 10.0.1.50: icmp_seq=1 ttl=64 time=0.5 ms
+64 bytes from 10.0.1.50: icmp_seq=2 ttl=64 time=0.4 ms
+64 bytes from 10.0.1.50: icmp_seq=3 ttl=64 time=0.5 ms
+# Server is pingable but port 5432 is blocked!
+
+$ iptables -L INPUT -n | grep 5432
+# (no output — no firewall rule allowing port 5432)
+# NOTE: A firewall rule change was applied Friday at 23:00 during maintenance.
+# The rule allowing port 5432 from this server was accidentally removed.

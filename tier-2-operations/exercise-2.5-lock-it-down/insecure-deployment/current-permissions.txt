@@ -1,0 +1,6 @@
+# Output of: ls -laR /opt/agents/social-monitor/
+/opt/agents/social-monitor/:
+drwxr-xr-x 6 root root 4096 Jan 20 10:00 .
+-rw-r--r-- 1 root root  256 Jan 20 10:00 config/.env    # WRONG: 644, world-readable, owned by root
+-rwxr-xr-x 1 root root 2048 Jan 20 10:00 src/main.py    # WRONG: owned by root
+drwxr-xr-x 2 root root 4096 Jan 20 10:00 logs/          # WRONG: owned by root

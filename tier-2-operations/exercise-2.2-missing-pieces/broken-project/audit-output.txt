@@ -1,0 +1,21 @@
+# Simulated output of: ls -la /opt/agents/data-collector/
+# This is what the intern's setup looks like
+
+total 48
+drwxr-xr-x  5 root root  4096 Jan 20 10:00 .
+drwxr-xr-x  3 root root  4096 Jan 20 09:55 ..
+-rw-r--r--  1 root root   256 Jan 20 10:00 .env          # <-- 644 permissions!
+-rw-r--r--  1 root root  2048 Jan 20 10:00 main.py       # <-- in root, not src/
+-rw-r--r--  1 root root   512 Jan 20 10:00 utils.py      # <-- in root, not src/
+-rw-r--r--  1 root root   128 Jan 20 10:00 config.json   # <-- in root, not config/
+drwxr-xr-x  2 root root  4096 Jan 20 10:00 config
+drwxr-xr-x 87 root root  4096 Jan 20 10:00 node_modules  # <-- 15,000 files, 200MB!
+# NOTE: No logs/ directory exists!
+# NOTE: No README.md exists!
+
+# Simulated output of: ls -la .env
+-rw-r--r-- 1 root root 256 Jan 20 10:00 .env
+# ^ WRONG! Should be 600 (owner-only read/write)
+
+# Simulated output of: du -sh node_modules/
+200M    node_modules/
